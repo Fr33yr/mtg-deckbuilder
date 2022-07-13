@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+header {
+  width: 100%;
+  min-height: 10vh;
+  background-color: darkcyan;
+}
+
+.login-btn {
+  position: absolute;
+  right: 0;
+  margin: -0.9rem 1rem 0 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.cardsviewer {
+  min-height: 100vh;
+  min-width: 75vw;
+  background-color: orangered;
+}
+
+.deck {
+  min-height: 100vh;
+  min-width: 25vw;
+  background-color: lightblue;
+}
+
+footer {
+  width: 100%;
+  min-height: 10vh;
+  background-color: darkseagreen;
+  position: absolute;
+  bottom: 0;
+}/*# sourceMappingURL=main.css.map */
