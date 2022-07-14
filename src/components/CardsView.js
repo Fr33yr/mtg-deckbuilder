@@ -10,6 +10,7 @@ import { Card } from './Card'
 import { chunkArray } from '../utils/Chunker'
 import {useWindowDimensions} from '../hooks/useWindowDimensions'
 
+
 export function CardsView() {
   const [state] = useContext(CardsContext)
   const { cardsData } = state
@@ -18,11 +19,13 @@ export function CardsView() {
   const [chunkSize, setChunkSize] = useState(8)
 
   useEffect(()=>{
-    if(width <= 800){
+    if(width <= 580){
       setChunkSize(4)
-    }else if(width <= 580){
-      setChunkSize(2)
-    }else{
+    }
+    else if(width <= 800){
+      setChunkSize(6)
+    }
+    else{
       setChunkSize(8)
     }
   },[width])
