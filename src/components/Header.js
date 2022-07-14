@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <Fragment>
         <header>
-            <h1>Header</h1>
+            <h1>Build your deck</h1>
             <button className='login-btn'>Login</button>
             <Search/>
         </header>

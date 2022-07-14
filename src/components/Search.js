@@ -1,12 +1,15 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useContext } from 'react'
 import { Formik, Form, Field } from 'formik'
 
 import '../assets/css/main.css'
 import { types } from '../utils/types'
 import { getCards } from '../api/api'
+import CardsContext from '../store/CardsContext'
+import { getCardsData } from '../store/actions'
+
 
 export default function Search() {
-    const [cardData, setCardData] = useState(null)
+    const [state, dispatch] = useContext(CardsContext)
 
     return (
         <Fragment>
@@ -19,7 +22,7 @@ export default function Search() {
                     }}
                     onSubmit={async (values)=> {
                         const res = await getCards(values.name, values.type, values.colors.join())
-                        setCardData(res)
+                        dispatch(getCardsData(res))
                     }}>
                     <Form>
 

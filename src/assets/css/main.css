@@ -30,9 +30,32 @@ header {
 }
 
 .cardsviewer {
+  padding-top: 2.1rem;
   min-height: 100vh;
   min-width: 75vw;
   background-color: orangered;
+}
+
+.swiper-wrapper {
+  min-height: 100vh;
+}
+
+.swiper-slide {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-flow: row;
+  gap: 0rem;
+  width: 100%;
+}
+
+.card {
+  width: 8rem;
+  margin: 0 auto;
+}
+
+.card-img {
+  width: 8rem;
+  height: 12rem;
 }
 
 .deck {
