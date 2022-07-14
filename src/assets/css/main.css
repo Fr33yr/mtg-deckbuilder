@@ -31,13 +31,19 @@ header {
 
 .cardsviewer {
   padding-top: 2.1rem;
-  min-height: 100vh;
+  height: 80vh;
   min-width: 75vw;
   background-color: orangered;
 }
 
 .swiper-wrapper {
-  min-height: 100vh;
+  height: 100vh;
+  padding-bottom: 1.2rem;
+}
+
+.swiper-pagination {
+  margin-top: 20px;
+  color: black;
 }
 
 .swiper-slide {
@@ -48,9 +54,28 @@ header {
   width: 100%;
 }
 
+@media only screen and (max-width: 800px) {
+  .swiper-slide {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-flow: row;
+    gap: 0rem;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .swiper-slide {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-flow: row;
+    gap: 0rem;
+    width: 100%;
+  }
+}
 .card {
   width: 8rem;
   margin: 0 auto;
+  padding-bottom: 1rem;
 }
 
 .card-img {

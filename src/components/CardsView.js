@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from 'react'
+import React, { Fragment, useContext, useEffect, useState } from 'react'
 import {Pagination} from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
@@ -8,14 +8,27 @@ import '../assets/css/main.css'
 import CardsContext from '../store/CardsContext'
 import { Card } from './Card'
 import { chunkArray } from '../utils/Chunker'
+import {useWindowDimensions} from '../hooks/useWindowDimensions'
 
 export function CardsView() {
   const [state] = useContext(CardsContext)
   const { cardsData } = state
   const filterCardsImg = cardsData.filter(card => card.imageUrl)
+  const { height, width } = useWindowDimensions()
+  const [chunkSize, setChunkSize] = useState(8)
 
-  let cards = chunkArray(filterCardsImg, 8)
-  console.log(cards)
+  useEffect(()=>{
+    if(width <= 800){
+      setChunkSize(4)
+    }else if(width <= 580){
+      setChunkSize(2)
+    }else{
+      setChunkSize(8)
+    }
+  },[width])
+
+  let cards = chunkArray(filterCardsImg, chunkSize)
+  
   return (
     <Fragment>
       <div className='cardsviewer'>
