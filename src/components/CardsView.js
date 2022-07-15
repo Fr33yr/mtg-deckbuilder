@@ -5,7 +5,7 @@ import 'swiper/css'
 import 'swiper/css/pagination';
 
 import '../assets/css/main.css'
-import CardsContext from '../store/CardsContext'
+import CardsContext from '../context/CardsContext'
 import { Card } from './Card'
 import { chunkArray } from '../utils/Chunker'
 import {useWindowDimensions} from '../hooks/useWindowDimensions'

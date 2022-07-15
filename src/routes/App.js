@@ -4,7 +4,7 @@ import '../assets/css/main.css'
 import { Layout } from '../components/Layout'
 import { CardsView } from '../components/CardsView'
 import { Deck } from '../components/Deck'
-import CardsContext from '../store/CardsContext'
+import CardsContext from '../context/CardsContext'
 
 function App() {
   const [value, setValue] = useState([])

@@ -4,7 +4,7 @@ import { Formik, Form, Field } from 'formik'
 import '../assets/css/main.css'
 import { types } from '../utils/types'
 import { getCards } from '../api/api'
-import CardsContext from '../store/CardsContext'
+import CardsContext from '../context/CardsContext'
 
 
 export default function Search() {
