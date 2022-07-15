@@ -1,22 +1,17 @@
-import { Fragment, useReducer } from "react";
+import { Fragment, useState } from "react";
 
 import '../assets/css/main.css'
 import { Layout } from '../components/Layout'
 import { CardsView } from '../components/CardsView'
 import { Deck } from '../components/Deck'
-import { reducerCards } from '../store/reduceCards'
-import { initialState } from "../store/initialState";
 import CardsContext from '../store/CardsContext'
 
 function App() {
-  const [state, dispatch] = useReducer(
-    reducerCards,
-    initialState,
-  )
+  const [value, setValue] = useState([])
 
   return (
     <Fragment>
-      <CardsContext.Provider value={[state, dispatch]}>
+      <CardsContext.Provider value={{value, setValue}}>
         <Layout>
           <div className="main">
             <CardsView />
