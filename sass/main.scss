@@ -83,8 +83,15 @@ header {
 
 .deck {
     min-height: 100vh;
-    min-width: 25vw;
+    min-width: 18vw;
     background-color: lightblue;
+}
+
+.deck ul li{
+    text-align: center;
+    background-color: darkslategray;
+    margin: .2em;
+    border-radius: 2px;
 }
 
 footer {
