@@ -13,7 +13,7 @@ export function Deck() {
             <ul className="decklist">
                 {
                   deckList && deckList.map((item, index) => 
-                  (<li key={index} className="decklist-item">{item}</li>))
+                  (<li key={index} className="decklist-item">{item.amount} x {item.name}</li>))
                 }
             </ul>
         </div>
