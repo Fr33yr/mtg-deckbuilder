@@ -7,29 +7,59 @@ body {
     overflow: hidden;
 }
 
+
 header {
     width: 100%;
     min-height: 10vh;
-    background-color: darkcyan;
+    background-color: $layout-black;
+}
+
+.find-btn{
+    background-color: orangered;
+    border: 2px solid orangered;
+    border-radius: 2px;
+    padding: 0 .5em;
+}
+
+.find-btn:hover{
+    border: 2px solid orange;
+}
+
+.searchform{
+    display: flex;
+    justify-content: center;
+}
+
+form input{
+    margin-left: 1rem;
 }
 
 .login-btn {
     position: absolute;
     right: 0;
     margin: -.9rem 1rem 0 0;
+    padding: .5em 1em;
+    background-color: orangered;
+    border: 2px solid orangered;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.login-btn:hover{
+    border: 2px solid orange;
 }
 
 .main {
     display: flex;
     flex-direction: row;
     width: 100%;
+    background-color: $pich-black;
 }
 
 .cardsviewer {
     padding-top: 2.1rem;
     height: 80vh;
     min-width: 82vw;
-    background-color: orangered;
 }
 
 .swiper-wrapper {
@@ -48,7 +78,20 @@ header {
     grid-auto-flow: row;
     gap: 0rem;
     width: 100%;
+    margin-bottom: 1.8rem;
 }
+
+/* target the active bullet */
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: orangered;
+    opacity: 1;
+  }
+  
+  /* target all bullets */
+  .swiper-pagination-bullet {
+    border: 1px solid orange;
+    opacity: 1;
+  }
 
 @media only screen and (max-width: 800px) {
     .swiper-slide {
@@ -81,23 +124,56 @@ header {
     height: 12rem;
 }
 
+.card-btn{
+    padding: 0 .5em;
+    font-weight: bold;
+    background-color: orangered;
+    border: 2px solid orangered;
+    cursor: pointer;
+}
+.card-btn:hover{
+    border: 2px solid orange;
+}
+
 .deck {
     min-height: 100vh;
     min-width: 18vw;
-    background-color: lightblue;
+    background-color: $raisin-black;
+    h3{
+        color: $tea-white;
+        text-align: center;
+    }
 }
 
 .deck ul li{
     text-align: center;
-    background-color: darkslategray;
+    color: black;
+    background-color: rgb(86, 97, 97);
     margin: .2em;
     border-radius: 2px;
+    border: 2px solid $gray;
+}
+
+.remove-btn{
+    position: absolute;
+    right: 0;
+    margin-right: .2rem;
+    padding: 0 .7em;
+    border-radius: 1px;
+    border: 1px solid wheat;
+    font-weight: bold;
+}
+
+.remove-btn:hover{
+    background-color: $darkgray;
+    border-radius: 1px;
+    border: 1px solid wheat;
 }
 
 footer {
     width: 100%;
     min-height: 10vh;
-    background-color: darkseagreen;
+    background-color: $layout-black;
     position: absolute;
     bottom: 0;
 }

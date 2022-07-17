@@ -13,7 +13,7 @@ export function Card(props) {
   return (
     <Fragment>
       <div className="card">
-        <button onClick={() => dispatch(addCards({ name, amount, imageUrl, id }))}>Add</button>
+        <button className='card-btn' onClick={() => dispatch(addCards({ name, amount, imageUrl, id }))}>+</button>
         <img src={imageUrl} alt="mtg-card" unselectable='on'
           className='card-img' />
       </div>

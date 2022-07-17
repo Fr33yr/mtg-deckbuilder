@@ -24,7 +24,6 @@ export default function Search() {
                         setValue(res)
                     }}>
                     <Form>
-
                         <label>
                             <Field type="checkbox" name="colors" value="R" />
                             red
