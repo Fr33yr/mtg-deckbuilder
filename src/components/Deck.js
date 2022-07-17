@@ -1,12 +1,15 @@
 import React,{Fragment} from 'react'
-import {useSelector} from 'react-redux'
+import {useSelector, useDispatch} from 'react-redux'
 
 import '../assets/css/main.css'
+import {rermoveCards} from '../store/deckSlice'
 
 
 export function Deck() {
   const deckList = useSelector((state)=>state.deck.value)
+  const dispatch = useDispatch()
   const add = (acc, curr) => acc + curr
+  console.log(deckList)
 
   return (
     <Fragment>
@@ -17,7 +20,8 @@ export function Deck() {
                   deckList && deckList.map((item, index) => 
                   (
                   <li key={index} className="decklist-item">{item.amount} x {item.name}
-                  <button className='remove-btn'>-</button></li>
+                  <button className='remove-btn'
+                  onClick={()=>dispatch(rermoveCards(item))}>-</button></li>
                   ))
                 }
             </ul>
