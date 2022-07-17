@@ -11,7 +11,7 @@ export function Deck() {
   return (
     <Fragment>
         <div className="deck">
-            <h3>Cards: {deckList.flat().map((i)=>(i.amount)).reduce(add)}</h3>
+            { deckList.length > 0 && <h3>Cards: {deckList.flat().map((i)=>(i.amount)).reduce(add)}</h3>}
             <ul className="decklist">
                 {
                   deckList && deckList.map((item, index) => 

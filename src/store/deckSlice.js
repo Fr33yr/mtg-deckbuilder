@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-import { hasItem, itemStacker } from '../utils/Stacks'
+import { hasItem, addAmount } from '../utils/Stacks'
 
 export const deckSlice = createSlice({
     name: 'deck',
@@ -10,7 +10,7 @@ export const deckSlice = createSlice({
     reducers: {
         addCards: (state, action) => {
             if (hasItem(state.value, action.payload.id) !== undefined) {
-                itemStacker(state.value, action.payload.id)
+                addAmount(state.value, action.payload.id)
             } else if (hasItem(state.value, action.payload.id) === undefined) {
                 state.value.push(action.payload)
             }

@@ -2,7 +2,7 @@ export function hasItem(arry, id) {
     return arry.find(item => item.id === `${id}`)
 }
 
-export function itemStacker(arr, id) {
+export function addAmount(arr, id) {
     const index = arr.findIndex(object => {
         return object.id === id;
     });
