@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   list-style: none;
+  text-decoration: none;
 }
 
 body {
@@ -71,18 +72,13 @@ form input {
   padding-bottom: 1.2rem;
 }
 
-.swiper-pagination {
-  margin-top: 20px;
-  color: black;
-}
-
 .swiper-slide {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-auto-flow: row;
   gap: 0rem;
   width: 100%;
-  margin-bottom: 0.6rem;
+  margin-bottom: 1rem;
 }
 
 /* target the active bullet */
@@ -122,8 +118,8 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 }
 
 .card-img {
-  width: 8rem;
-  height: 12rem;
+  width: 9rem;
+  height: 13rem;
 }
 
 .card-btn {
@@ -179,4 +175,12 @@ footer {
   background-color: #202632;
   position: absolute;
   bottom: 0;
+}
+footer div {
+  padding-top: 0.9rem;
+  text-align: center;
+}
+
+footer a:visited {
+  color: black;
 }/*# sourceMappingURL=main.css.map */
