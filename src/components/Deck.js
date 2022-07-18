@@ -14,17 +14,22 @@ export function Deck() {
   return (
     <Fragment>
         <div className="deck">
-            { deckList.length > 0 && <h3>Cards: {deckList.flat().map((i)=>(i.amount)).reduce(add)}</h3>}
-            <ul className="decklist">
+            { deckList.length > 0 && <h3 className="cardsamount">Cards: {deckList.flat().map((i)=>(i.amount)).reduce(add)}</h3>}
+            <div className="deck-items">
                 {
                   deckList && deckList.map((item, index) => 
                   (
-                  <li key={index} className="decklist-item">{item.amount} x {item.name}
+                  <div key={index} className="decklist-item">
+                  <p className='decklist-item__amount'>{item.amount} X </p>
+                  <div className='decklist-item__image--container'>
+                    <img className='decklist-item__image'
+                     src={item.imageUrl} alt={item.name} />
+                  </div>
                   <button className='remove-btn'
-                  onClick={()=>dispatch(rermoveCards(item))}>-</button></li>
+                  onClick={()=>dispatch(rermoveCards(item))}>-</button></div>
                   ))
                 }
-            </ul>
+            </div>
         </div>
     </Fragment>
   )
