@@ -5,16 +5,16 @@ import '../assets/css/main.css'
 import {rermoveCards} from '../store/deckSlice'
 
 
-export function Deck() {
+export function DeckView() {
   const deckList = useSelector((state)=>state.deck.value)
   const dispatch = useDispatch()
   const add = (acc, curr) => acc + curr
 
   return (
     <Fragment>
-        <div className="deck">
+        <div className="deckview">
             { deckList.length > 0 && <h3 className="cardsamount">Cards: {deckList.flat().map((i)=>(i.amount)).reduce(add)}</h3>}
-            <div className="deck-items">
+            <div className="deck">
                 {
                   deckList && deckList.map((item, index) => 
                   (
