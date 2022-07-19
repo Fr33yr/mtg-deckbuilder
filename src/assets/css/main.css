@@ -91,6 +91,14 @@ header {
   border: 2px solid #ec8600;
 }
 
+.save-deckname {
+  position: absolute;
+  left: 0;
+  max-height: 25px;
+  padding: 0.5rem 0;
+  margin-left: 10.5rem;
+}
+
 .searchform {
   position: absolute;
   margin: 0 auto;

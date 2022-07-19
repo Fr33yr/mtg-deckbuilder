@@ -1,7 +1,9 @@
 import React, { Fragment, useContext } from 'react'
+import {useSelector} from 'react-redux'
 import { Formik, Form, Field } from 'formik'
 
 import '../assets/css/main.css'
+import {Save} from '../components/Save'
 import { types } from '../utils/types'
 import { getCards } from '../api/api'
 import CardsContext from '../context/CardsContext'
@@ -15,7 +17,7 @@ export default function Search() {
     return (
         <Fragment>
             <div className='searchform'>
-                {user ? <button className='save-btn'>Save</button> : ""}
+                {user ? <Save/> : ""}
                 <Formik
                     initialValues={{
                         colors: [],

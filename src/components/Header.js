@@ -7,7 +7,6 @@ import { useAuth } from '../context/AuthContext'
 export default function Header() {
 
   const { loginWithGoogle, user, logout } = useAuth()
-console.log(user);
   const handleGoogleSignIn = async () => {
     await loginWithGoogle()
   }

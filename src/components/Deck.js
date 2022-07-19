@@ -9,7 +9,6 @@ export function Deck() {
   const deckList = useSelector((state)=>state.deck.value)
   const dispatch = useDispatch()
   const add = (acc, curr) => acc + curr
-  console.log(deckList)
 
   return (
     <Fragment>

@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app'
-import { getFirestore } from 'firebase/firestore'
+import { getFirestore, doc, setDoc } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
 
 const firebaseConfig = {
@@ -15,4 +15,13 @@ const app = initializeApp(firebaseConfig)
 const auth = getAuth(app)
 const db = getFirestore()
 
-export { app, auth, db }
+const saveDeck = async (deckData, userId, deckName) =>{
+   await setDoc(doc(db, userId, deckName), {
+        deckData
+    })
+}
+saveDeck().catch((err) => {
+    return console.log(err)
+})
+
+export { app, auth, db, saveDeck }
