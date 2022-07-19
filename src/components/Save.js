@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import { Formik, Form, Field } from 'formik'
 
 import '../assets/css/main.css'
-import { saveDeck } from '../config/firebase.config'
+import { saveDeck } from '../config/firebase'
 import { useAuth } from '../context/AuthContext'
 
 //validates deck name
