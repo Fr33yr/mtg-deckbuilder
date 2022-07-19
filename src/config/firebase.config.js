@@ -2,6 +2,7 @@ import { initializeApp } from 'firebase/app'
 import { getFirestore, doc, setDoc } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
 
+
 const firebaseConfig = {
     apiKey: "AIzaSyAxlHXZ9tSH19CTRGWFTW2IMS4zZxgtPxY",
     authDomain: "mtg-deckbuilder-bf894.firebaseapp.com",
