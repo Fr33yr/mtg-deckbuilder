@@ -1,4 +1,5 @@
 @import './_config.scss';
+@import './_home.scss';
 
 body {
     margin: 0;
@@ -16,6 +17,20 @@ header {
     justify-content: space-around;
 }
 
+.header-user{
+    position: absolute;
+    left: 0;
+    margin-left: 3rem;
+    padding-top: .6em;
+}
+
+.login-warn{
+    text-align: left;
+    position: absolute;
+    right: 0;
+    padding-top: .34em;
+    margin-right: 7.5rem;
+}
 
 .login-btn {
     position: absolute;
@@ -34,6 +49,20 @@ header {
 }
 
 //===Search===
+
+.save-btn{
+    position: absolute;
+    left: 0;
+    margin-left: 6rem;
+    height: 25px;
+    border-radius: 2px;
+    border: 2px solid orangered;
+    background-color: orangered;
+    padding: 0 1.3em;
+}
+.save-btn:hover{
+    border: 2px solid $marigold;
+}
 
 .searchform{
     position: absolute;

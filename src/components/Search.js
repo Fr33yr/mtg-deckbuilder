@@ -5,14 +5,17 @@ import '../assets/css/main.css'
 import { types } from '../utils/types'
 import { getCards } from '../api/api'
 import CardsContext from '../context/CardsContext'
+import {useAuth} from '../context/AuthContext'
 
 
 export default function Search() {
     const {value, setValue} = useContext(CardsContext)
+    const {user} = useAuth()
 
     return (
         <Fragment>
             <div className='searchform'>
+                {user ? <button className='save-btn'>Save</button> : ""}
                 <Formik
                     initialValues={{
                         colors: [],
