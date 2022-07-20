@@ -12,9 +12,8 @@ const validateName = (values) => {
 
     if (!values.name) {
         errors.name = "Name required"
+        return alert(errors.name)
     }
-
-    return alert(errors.name)
 }
 
 export function Save() {
