@@ -17,18 +17,6 @@ const app = initializeApp(firebaseConfig)
 const auth = getAuth(app)
 const db = getFirestore()
 
-const getDecks = (userId) => {
-    const decksRef = collection(db, userId)
-    const q = query(decksRef)
-    getDocs(q).then((snapshot)=>{
-        let arr = []
-        snapshot.forEach((doc) => {
-            arr.push({ ...doc.data(), id: doc.id})
-        })
-        console.log(arr)
-    }).catch(err=>console.log(err))
-}
-
 const saveDeck = async (deckData, userId, deckName) => {
     await setDoc(doc(db, userId, deckName), {
         deckData
@@ -50,4 +38,4 @@ const renameDeck = async (userId, deckName) => {
     }
 }
 
-export { app, auth, db, saveDeck, renameDeck, getDecks }
+export { app, auth, db, saveDeck, renameDeck }
