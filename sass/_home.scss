@@ -27,7 +27,12 @@
     max-height: 4rem;
 }
 
+.deckitem-name{
+    color: $gray;
+}
+
 .deckitem-delete__btn{
+    cursor: pointer;
     background-color: #c9170e;
     border: 2px solid brown;
     border-radius: 2px;

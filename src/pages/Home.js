@@ -14,7 +14,7 @@ export function Home() {
     <Fragment>
       <Link to="/deckbuilder" className='newdeck'>New <br />Deck</Link>
       {
-        data && data.map((deck) => <DeckItem {...deck} key={deck.id} />)
+        data && data.map((deck) => <DeckItem {...deck} user={user} key={deck.id} />)
       }
     </Fragment>
   )

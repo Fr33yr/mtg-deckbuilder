@@ -1,11 +1,12 @@
 import React, { Fragment } from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import {useNavigate} from 'react-router-dom'
 import { Formik, Form, Field } from 'formik'
 
 import '../assets/css/main.css'
 import { saveDeck } from '../config/firebase'
 import { useAuth } from '../context/AuthContext'
+import {reset} from '../store/deckSlice'
 
 //validates deck name
 const validateName = (values) => {
@@ -19,6 +20,7 @@ const validateName = (values) => {
 
 export function Save() {
     const deckList = useSelector((state) => state.deck.value)
+    const dispatch = useDispatch()
     const { user } = useAuth()
     let navigate = useNavigate()
 
@@ -32,6 +34,7 @@ export function Save() {
                 onSubmit={(values) => {
                     values.name && saveDeck({ deckList, deckName: values.name }, user.uid, values.name)
                     navigate("/")
+                    dispatch(reset())
                 }}>
                 <Form>
                     <button className='save-btn'

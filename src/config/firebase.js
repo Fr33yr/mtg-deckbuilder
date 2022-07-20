@@ -3,6 +3,7 @@ import {
     getFirestore,
     doc, setDoc,
     getDoc,
+    deleteDoc
 } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
 
@@ -19,6 +20,9 @@ const saveDeck = async (deckData, userId, deckName) => {
     })
 }
 
+const deleteDeck = async (userId, deckName) =>{
+    await deleteDoc(doc(db, userId, deckName))
+}
 
 const renameDeck = async (userId, deckName) => {
     const docRef = doc(db, userId, deckName)
@@ -34,4 +38,4 @@ const renameDeck = async (userId, deckName) => {
     }
 }
 
-export { app, auth, db, saveDeck, renameDeck }
+export { app, auth, db, saveDeck, renameDeck, deleteDeck }

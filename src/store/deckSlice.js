@@ -24,9 +24,12 @@ export const deckSlice = createSlice({
                 removeItem(state.value, action.payload.id)
             }
             decreaseAmount(state.value, action.payload.id)
+        },
+        reset: (state, action) => {
+            state.value = []
         }
     }
 })
 
-export const { addCards, rermoveCards } = deckSlice.actions
+export const { addCards, rermoveCards, reset } = deckSlice.actions
 export default deckSlice.reducer
