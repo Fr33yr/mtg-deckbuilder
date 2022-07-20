@@ -17,14 +17,16 @@ const app = initializeApp(firebaseConfig)
 const auth = getAuth(app)
 const db = getFirestore()
 
-const getDecks = async (userId) => {
+const getDecks = (userId) => {
     const decksRef = collection(db, userId)
     const q = query(decksRef)
-
-    const querySnapshot = await getDocs(q)
-    querySnapshot.forEach((doc)=>{
-        console.log(doc.id, " => ", doc.data())
-    })
+    getDocs(q).then((snapshot)=>{
+        let arr = []
+        snapshot.forEach((doc) => {
+            arr.push({ ...doc.data(), id: doc.id})
+        })
+        console.log(arr)
+    }).catch(err=>console.log(err))
 }
 
 const saveDeck = async (deckData, userId, deckName) => {
@@ -38,7 +40,7 @@ const renameDeck = async (userId, deckName) => {
     const docRef = doc(db, userId, deckName)
     try {
         const docSnap = await getDoc(docRef)
-        if(docSnap.exists()){
+        if (docSnap.exists()) {
             console.log("Document data", docSnap.data());
         } else {
             console.log("No existe");
