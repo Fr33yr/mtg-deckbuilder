@@ -1,10 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-import { hasItem, removeItem, addAmount, decreaseAmount } from '../utils/Stacks'
+import { hasItem, removeItem,
+     addAmount, 
+     decreaseAmount
+    } from '../utils/reducerFunctions'
 
 export const deckSlice = createSlice({
     name: 'deck',
     initialState: {
+        deckName: '',
         value: []
     },
     reducers: {
@@ -20,9 +24,12 @@ export const deckSlice = createSlice({
                 removeItem(state.value, action.payload.id)
             }
             decreaseAmount(state.value, action.payload.id)
+        },
+        nameDeck: (state, action)=>{
+            state.value = action.payload 
         }
     }
 })
 
-export const { addCards, rermoveCards } = deckSlice.actions
+export const { addCards, rermoveCards, nameDeck } = deckSlice.actions
 export default deckSlice.reducer
