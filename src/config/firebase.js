@@ -2,11 +2,7 @@ import { initializeApp } from 'firebase/app'
 import {
     getFirestore,
     doc, setDoc,
-    collection,
-    query,
-    where,
-    getDocs,
-    getDoc
+    getDoc,
 } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
 

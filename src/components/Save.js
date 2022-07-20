@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import { useSelector } from 'react-redux'
+import {useNavigate} from 'react-router-dom'
 import { Formik, Form, Field } from 'formik'
 
 import '../assets/css/main.css'
@@ -19,6 +20,7 @@ const validateName = (values) => {
 export function Save() {
     const deckList = useSelector((state) => state.deck.value)
     const { user } = useAuth()
+    let navigate = useNavigate()
 
     return (
         <Fragment>
@@ -29,6 +31,7 @@ export function Save() {
                 validate={validateName}
                 onSubmit={(values) => {
                     values.name && saveDeck({ deckList, deckName: values.name }, user.uid, values.name)
+                    navigate("/")
                 }}>
                 <Form>
                     <button className='save-btn'
