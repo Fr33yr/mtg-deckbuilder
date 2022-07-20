@@ -26,7 +26,3 @@ export function decreaseAmount(arr, id) {
         arr[index].amount -= 1;
     }
 }
-
-export function setName(name){
-    return name
-}

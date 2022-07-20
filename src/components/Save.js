@@ -27,7 +27,9 @@ export function Save() {
                     name: ""
                 }}
                 validate={validateName}
-                onSubmit={(values) => (values.name && saveDeck(deckList, user.uid, values.name))}>
+                onSubmit={(values) => {
+                    values.name && saveDeck({ deckList, deckName: values.name }, user.uid, values.name)
+                }}>
                 <Form>
                     <button className='save-btn'
                         type='submit'>Save</button>
