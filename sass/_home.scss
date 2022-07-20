@@ -1,5 +1,10 @@
 @import './config.scss';
 
+.home{
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+}
 
 .newdeck {
     color: $pich-black;
@@ -23,11 +28,17 @@
 }
 
 .deckitem {
+    margin-left: 3rem;
     border: 2px solid $gray;
     max-height: 4rem;
+    width: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .deckitem-name{
+    text-align: center;
     color: $gray;
 }
 
@@ -36,6 +47,7 @@
     background-color: #c9170e;
     border: 2px solid brown;
     border-radius: 2px;
+    height: 25px;
 }
 
 .deckitem-delete__btn:hover{

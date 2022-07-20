@@ -16,6 +16,12 @@
   letter-spacing: 1px;
 }
 
+.home {
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+
 .newdeck {
   color: #101319;
   background-color: #c9170e;
@@ -37,11 +43,17 @@
 }
 
 .deckitem {
+  margin-left: 3rem;
   border: 2px solid #8D8AA8;
   max-height: 4rem;
+  width: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .deckitem-name {
+  text-align: center;
   color: #8D8AA8;
 }
 
@@ -50,6 +62,7 @@
   background-color: #c9170e;
   border: 2px solid brown;
   border-radius: 2px;
+  height: 25px;
 }
 
 .deckitem-delete__btn:hover {

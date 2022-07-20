@@ -12,10 +12,12 @@ export function Home() {
 
   return (
     <Fragment>
-      <Link to="/deckbuilder" className='newdeck'>New <br />Deck</Link>
-      {
-        data && data.map((deck) => <DeckItem {...deck} user={user} key={deck.id} />)
-      }
+      <div className='home'>
+        <Link to="/deckbuilder" className='newdeck'>New <br />Deck</Link>
+        {
+          data && data.map((deck) => <DeckItem {...deck} user={user} key={deck.id} />)
+        }
+      </div>
     </Fragment>
   )
 }
