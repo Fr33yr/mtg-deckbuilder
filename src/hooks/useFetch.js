@@ -18,7 +18,7 @@ export function useFetch(user){
             setData(arr)
           }).catch(err => console.log(err))
         }
-      }, [user, data])
+      }, [user])
 
-    return [data]
+    return [data, setData]
 }
