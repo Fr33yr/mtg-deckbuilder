@@ -5,7 +5,7 @@ import { db } from "../config/firebase";
 
 export function useFetch(user){
     const [data, setData] = useState(null)
-
+    
     useEffect(() => {
         if (user) {
           const decksRef = collection(db, user.uid)

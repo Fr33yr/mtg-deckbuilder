@@ -7,6 +7,7 @@ export function removeItem(arr, id){
         return object.id === id;
     })
     arr.splice(index,1)
+    return arr
 }
 
 export function addAmount(arr, id) {

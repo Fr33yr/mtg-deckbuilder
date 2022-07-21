@@ -28,9 +28,12 @@ export const deckSlice = createSlice({
         },
         reset: (state, action) => {
             state.value = []
+            state.deckName = ''
         },
         selectDeck: (state, action) =>{
-            state.value = action.payload
+            const {deckName, deckList} = action.payload
+            state.value = deckList
+            state.deckName = deckName
         }
     }
 })
