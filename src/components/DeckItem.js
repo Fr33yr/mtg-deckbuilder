@@ -16,7 +16,7 @@ export function DeckItem(props) {
   }
 
   const handleSelect = () =>{
-    dispatch(selectDeck({deckName, deckList}))
+    dispatch(selectDeck({deckName, deckList, id}))
     navigate("/deckbuilder")
   }
 

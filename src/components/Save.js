@@ -25,10 +25,6 @@ export function Save() {
     const { user } = useAuth()
     let navigate = useNavigate()
 
-    const handleSubmit = () => {
-
-    }
-
     return (
         <Fragment>
             <Formik

@@ -6,14 +6,16 @@ import { useFetch } from '../hooks/useFetch'
 import { DeckItem } from '../components/DeckItem'
 
 
-export function Home() {
+export function Home(props) {
   const { user } = useAuth()
   const [data, setData] = useFetch(user)
-  
+  const {setValue} = props
+
   return (
     <Fragment>
       <div className='home'>
-        <Link to="/deckbuilder" className='newdeck'>New <br />Deck</Link>
+        <Link to="/deckbuilder" className='newdeck'
+        onClick={()=>setValue([])}>New <br />Deck</Link>
         {
           data && data.map((deck) => 
           <DeckItem {...deck} user={user} key={deck.id}

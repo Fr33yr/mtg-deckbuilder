@@ -20,7 +20,7 @@ const saveDeck = async (deckData, userId) => {
     await setDoc(newDeckRef, deckData)
 }
 
-const deleteDeck = async (userId, deckName) =>{
+const deleteDeck = async (userId, deckName) => {
     await deleteDoc(doc(db, userId, deckName))
 }
 
