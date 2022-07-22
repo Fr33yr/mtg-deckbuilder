@@ -125,10 +125,14 @@ header {
   border: 2px solid orange;
 }
 
+.save {
+  width: 233px;
+  display: flex;
+  flex-direction: row;
+  margin-right: 6vw;
+}
+
 .save-btn {
-  position: absolute;
-  left: 0;
-  margin-left: 6rem;
   height: 25px;
   border-radius: 2px;
   border: 2px solid orangered;
@@ -141,23 +145,29 @@ header {
 }
 
 .save-deckname {
-  position: absolute;
-  left: 0;
   max-height: 25px;
-  padding: 0.5rem 0;
-  margin-left: 10.5rem;
+  padding-left: 0.4em;
+  margin: 0;
 }
 
-.searchform {
+.search {
   position: absolute;
   margin: 0 auto;
   left: 0;
   right: 0;
-  padding-right: 12vw;
   height: 50px;
   display: flex;
-  justify-content: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
   background-color: #202632;
+}
+
+.searchform {
+  min-width: 50vw;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin-left: 12vw;
 }
 
 .find-btn {
@@ -173,8 +183,12 @@ header {
 }
 
 form input {
-  margin-left: 1rem;
   height: 25px;
+  margin-right: 1.1rem;
+}
+
+.select {
+  margin-right: 1rem;
 }
 
 .main {

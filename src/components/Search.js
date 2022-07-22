@@ -16,7 +16,7 @@ export default function Search() {
 
     return (
         <Fragment>
-            <div className='searchform'>
+            <div className='search'>
                 {user ? <Save/> : ""}
                 <Formik
                     initialValues={{
@@ -28,7 +28,7 @@ export default function Search() {
                         const res = await getCards(values.name, values.type, values.colors.join())
                         setValue(res)
                     }}>
-                    <Form>
+                    <Form className='searchform'>
                         <label>
                             <Field type="checkbox" name="colors" value="R" />
                             red
@@ -51,7 +51,7 @@ export default function Search() {
                         </label>
 
                         <label>
-                            <Field name="type" as="select" className="bg-white mr-6">
+                            <Field name="type" as="select" className="select">
                                 {types.map((t, index) => <option value={t} key={index}
                                     className="bg-white">{t}</option>)}
                             </Field>

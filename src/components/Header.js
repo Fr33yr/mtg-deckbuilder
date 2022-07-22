@@ -22,7 +22,7 @@ export default function Header() {
   return (
     <Fragment>
       <header>
-        {user ? <h3 className='header-user'>User: {user.displayName}</h3> : 
+        {user ? <h3 className='header-user'>User: </h3> : 
         <p className='login-warn'>Login to save <br/>your builds</p>}
         {user ? <button className='login-btn'
           onClick={handleLogout}>Logout</button> :
