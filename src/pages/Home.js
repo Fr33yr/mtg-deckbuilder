@@ -14,7 +14,7 @@ export function Home(props) {
   const {setValue} = props
   const dispatch = useDispatch()
   let location = useLocation()
-
+  
   useEffect(()=>{
     if(location.pathname === '/'){
       setValue([])
