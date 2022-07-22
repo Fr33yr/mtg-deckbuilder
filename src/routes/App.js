@@ -20,7 +20,7 @@ function App() {
               <div className="main">
                 <Routes>
                   <Route path="/" element={<Home setValue={setValue}/>}></Route>
-                  <Route path="/deckbuilder" element={<Deckbuilder/>}></Route>
+                  <Route path="/deckbuilder" element={<Deckbuilder setValue={setValue}/>}></Route>
                 </Routes>
               </div>
             </Layout>

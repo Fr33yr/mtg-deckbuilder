@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import {useNavigate} from 'react-router-dom'
 import { Formik, Form, Field } from 'formik'
 
 import '../assets/css/main.css'
 import { saveDeck } from '../config/firebase'
 import { useAuth } from '../context/AuthContext'
-import {reset} from '../store/deckSlice'
+import {useFetch} from '../hooks/useFetch'
 
 //validates deck name
 const validateName = (values) => {
@@ -21,7 +21,7 @@ const validateName = (values) => {
 export function Save() {
     const deckList = useSelector((state) => state.deck.value)
     const deckName = useSelector((state)=> state.deck.deckName)
-    const dispatch = useDispatch()
+    const deckId = useSelector((state)=> state.deck.deckId)
     const { user } = useAuth()
     let navigate = useNavigate()
 
@@ -33,9 +33,8 @@ export function Save() {
                 }}
                 validate={validateName}
                 onSubmit={(values) => {
-                    values.name && saveDeck({ deckList, deckName: values.name }, user.uid)
+                    values.name && saveDeck({ deckList, deckName: values.name }, user.uid, deckId)
                     navigate("/")
-                    dispatch(reset())
                 }}
                 >
                 <Form>
