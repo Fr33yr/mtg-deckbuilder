@@ -11,7 +11,7 @@ body {
 
 header {
     width: 100%;
-    min-height: 7vh;
+    min-height: 8.5vh;
     background-color: $layout-black;
     display: flex;
     justify-content: space-around;
@@ -35,8 +35,8 @@ header {
 .login-btn {
     position: absolute;
     right: 0;
-    margin: .5rem 0;
-    margin-right: 2rem;
+    margin: .8rem 0;
+    margin-right: 1.5rem;
     padding: .5em 1em;
     background-color: orangered;
     border: 2px solid orangered;
@@ -265,7 +265,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 
 footer {
     width: 100%;
-    min-height: 10vh;
+    min-height: 8.5vh;
     background-color: $layout-black;
     position: absolute;
     bottom: 0;
