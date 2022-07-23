@@ -5,8 +5,11 @@ import '../assets/css/main.css'
 import { Layout } from '../components/Layout'
 import {Deckbuilder} from '../pages/Deckbuilder'
 import {Home} from '../pages/Home'
+import {Login} from "../pages/Login"
+import {SignIn} from '../pages/SignIn'
 import CardsContext from '../context/CardsContext'
 import { AuthProvider } from '../context/AuthContext'
+
 
 function App() {
   const [value, setValue] = useState([])
@@ -21,6 +24,8 @@ function App() {
                 <Routes>
                   <Route path="/" element={<Home setValue={setValue}/>}></Route>
                   <Route path="/deckbuilder" element={<Deckbuilder setValue={setValue}/>}></Route>
+                  <Route path="/login" element={<Login/>}></Route>
+                  <Route path="/signin" element={<SignIn/>}></Route>
                 </Routes>
               </div>
             </Layout>

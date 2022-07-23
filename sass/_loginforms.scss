@@ -1,0 +1,37 @@
+@import './_config.scss';
+
+.signinform{
+    @include flex-column-center;
+    margin: 0 auto;
+    margin-top: 30vh;
+}
+
+.signinform input{
+    @include loginform-input
+}
+
+.signinform button{
+    @include loginform-btn
+}
+
+.loginform{
+    @include flex-column-center;
+    margin: 0 auto;
+    margin-top: 20vh;
+    max-height: 300px;
+    border: 2px solid $gray;
+}
+
+.loginform input{
+    @include loginform-input
+}
+
+.loginform button{
+    @include loginform-btn
+}
+
+.loginform p{
+    text-align: center;
+    margin-top: 3rem;
+    width: 200px;
+}

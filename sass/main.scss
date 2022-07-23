@@ -1,5 +1,8 @@
 @import './_config.scss';
 @import './_home.scss';
+@import './_loginforms.scss';
+@import './_search.scss';
+@import './_deck.scss';
 
 body {
     margin: 0;
@@ -8,6 +11,13 @@ body {
     overflow: hidden;
 }
 
+.main {
+    display: flex;
+    flex-direction: row;
+    height: 90vh;
+    width: 100%;
+    background-color: $pich-black;
+}
 
 header {
     width: 100%;
@@ -48,79 +58,6 @@ header {
     border: 2px solid orange;
 }
 
-//===Search===
-.save{
-    width: 233px;
-    display: flex;
-    flex-direction: row;
-    margin-right: 6vw;
-}
-
-.save-btn{
-    height: 25px;
-    border-radius: 2px;
-    border: 2px solid orangered;
-    background-color: orangered;
-    padding: 0 1.3em;
-}
-.save-btn:hover{
-    border: 2px solid $marigold;
-}
-
-.save-deckname{
-    max-height: 25px;
-    padding-left: .4em;
-    margin: 0;
-}
-
-.search{
-    position: absolute;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    height: 50px;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    background-color: $layout-black;
-}
-
-.searchform{
-    min-width: 50vw;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    margin-left: 12vw;
-}
-
-.find-btn{
-    height: 25px;
-    background-color: orangered;
-    border: 2px solid orangered;
-    border-radius: 2px;
-    padding: 0 .5em;
-}
-
-.find-btn:hover{
-    border: 2px solid orange;
-}
-
-form input{
-    height: 25px;
-    margin-right: 1.1rem;
-}
-
-.select{
-    margin-right: 1rem;
-}
-
-.main {
-    display: flex;
-    flex-direction: row;
-    height: 90vh;
-    width: 100%;
-    background-color: $pich-black;
-}
 
 //===Cardsviewer===
 
@@ -198,68 +135,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     border: 2px solid orange;
 }
 
-//===Deck===
-.deckview {
-    max-height: 83vh;
-    min-width: 22vw;
-    padding-left: .5rem;
-    padding-right: .5rem;
-    padding-top: 52px;
-    background-color: $raisin-black;
-    overflow: scroll;
-    display: flex;
-    flex-direction: column;
-    h3{
-        text-align: center;
-        color: $gray;
-    }
-    p{
-        color: $gray;
-        padding: .5rem 0;
-        text-align: center;
-        font-weight: bold;
-        min-width: 40px;
-    }
-}
 
-@media only screen and (min-width: 1480px) {
-    .deckview{
-        overflow-x: hidden;
-    }
-}
-
-.decklist-item{
-    display: flex;
-    flex-direction: row;
-    border: 2px solid $gray;
-    border-radius: 3px;
-    margin-top: .3rem;
-}
-
-.decklist-item__image--container{
-    max-height: 38px;
-    min-width: 225px;
-    overflow: hidden;
-    width: 100%;
-    border-left: 2px solid $gray;
-    border-right: 2px solid $gray;
-}
-
-.remove-btn{
-    height: 2.5rem;
-    min-width: 40px;
-    border-radius: 1px;
-    background-color: $gray;
-    border: 2px solid wheat;
-    font-weight: bold;
-    text-align: center;
-}
-
-.remove-btn:hover{
-    background-color: $darkgray;
-    border-radius: 1px;
-    border: 2px solid wheat;
-}
 
 //===Footer===
 

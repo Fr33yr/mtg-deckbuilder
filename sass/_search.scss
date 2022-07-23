@@ -1,0 +1,67 @@
+@import './_config.scss';
+
+//===Search===
+.save{
+    width: 233px;
+    display: flex;
+    flex-direction: row;
+    margin-right: 6vw;
+}
+
+.save-btn{
+    height: 25px;
+    border-radius: 2px;
+    border: 2px solid orangered;
+    background-color: orangered;
+    padding: 0 1.3em;
+}
+.save-btn:hover{
+    border: 2px solid $marigold;
+}
+
+.save-deckname{
+    max-height: 25px;
+    padding-left: .4em;
+    margin: 0;
+}
+
+.search{
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    height: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    background-color: $layout-black;
+}
+
+.searchform{
+    min-width: 50vw;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-left: 12vw;
+}
+
+.find-btn{
+    height: 25px;
+    background-color: orangered;
+    border: 2px solid orangered;
+    border-radius: 2px;
+    padding: 0 .5em;
+}
+
+.find-btn:hover{
+    border: 2px solid orange;
+}
+
+form input{
+    height: 25px;
+    margin-right: 1.1rem;
+}
+
+.select{
+    margin-right: 1rem;
+}
