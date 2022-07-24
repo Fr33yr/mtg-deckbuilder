@@ -7,6 +7,10 @@
   letter-spacing: 1px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +18,10 @@
   list-style: none;
   text-decoration: none;
   letter-spacing: 1px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .home {
@@ -88,25 +96,45 @@
   letter-spacing: 1px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .signinform {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  margin-top: 30vh;
+  margin-top: 20vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: 2px solid #8D8AA8;
+  color: wheat;
+  padding: 2rem 0;
+  border-radius: 2px;
 }
 
 .signinform input {
-  margin: 0 0.3rem;
-  margin-top: 2rem;
+  margin: 0.35rem 1.5rem 1rem 1.5rem;
+  padding: 0 0.45em;
+  width: 200px;
+  font-weight: 400;
 }
 
 .signinform button {
-  margin-top: 3rem;
-  height: 2rem;
-  padding: 0 0.5rem;
+  margin-top: 1rem;
+  height: 2.4rem;
+  width: 10rem;
+  border: 2px solid orangered;
+  background-color: orangered;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.signinform button:hover {
   border: 2px solid #ec8600;
-  background-color: orange;
 }
 
 .loginform {
@@ -115,27 +143,50 @@
   align-items: center;
   margin: 0 auto;
   margin-top: 20vh;
-  max-height: 300px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   border: 2px solid #8D8AA8;
+  color: wheat;
+  padding: 2rem 0;
+  border-radius: 2px;
 }
 
 .loginform input {
-  margin: 0 0.3rem;
-  margin-top: 2rem;
+  margin: 0.35rem 1.5rem 1rem 1.5rem;
+  padding: 0 0.45em;
+  width: 200px;
+  font-weight: 400;
 }
 
 .loginform button {
-  margin-top: 3rem;
-  height: 2rem;
-  padding: 0 0.5rem;
+  margin-top: 1rem;
+  height: 2.4rem;
+  width: 10rem;
+  border: 2px solid orangered;
+  background-color: orangered;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.loginform button:hover {
   border: 2px solid #ec8600;
-  background-color: orange;
 }
 
 .loginform p {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 2.2rem;
   width: 200px;
+}
+
+.loginform p a:hover {
+  color: white;
+  transition: linear;
+}
+
+.loginform a:visited {
+  color: wheat;
 }
 
 * {
@@ -145,6 +196,10 @@
   list-style: none;
   text-decoration: none;
   letter-spacing: 1px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .save {
@@ -222,6 +277,10 @@ form input {
   letter-spacing: 1px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .deckview {
   max-height: 83vh;
   min-width: 22vw;
@@ -286,6 +345,8 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow: hidden;
+  font-size: 1rem;
+  font-family: "Ibarra Real Nova", serif;
 }
 
 .main {
@@ -329,6 +390,7 @@ header {
   border: 2px solid orangered;
   border-radius: 2px;
   cursor: pointer;
+  font-weight: 500;
 }
 
 .login-btn:hover {
@@ -419,7 +481,15 @@ footer div {
   padding-top: 0.9rem;
   text-align: center;
 }
+footer p {
+  color: rgb(233, 233, 246);
+}
 
 footer a:visited {
-  color: black;
+  color: rgb(233, 233, 246);
+}
+
+footer a:hover {
+  color: white;
+  transition: linear;
 }/*# sourceMappingURL=main.css.map */

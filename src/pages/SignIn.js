@@ -1,4 +1,4 @@
-import React,{Fragment} from 'react'
+import React, { Fragment } from 'react'
 import { Formik, Form, Field } from 'formik'
 
 import '../assets/css/main.css'
@@ -6,19 +6,21 @@ import '../assets/css/main.css'
 export function SignIn() {
   return (
     <Fragment>
-        <Formik
+      <Formik
         initialValues={{
-          name:'',
-          email:'',
+          name: '',
+          email: '',
           password: ''
         }}>
-            <Form className='signinform'> 
-                <Field name="name" type="text"/>
-                <Field name="email" type="email"/>
-                <Field name="password" type="password"/>
-                <button type='submit'>SignIn</button>
-            </Form>
-        </Formik>
+        <Form className='signinform'>
+          <label>email</label>
+          <Field name="email" type="email" />
+          <label>password</label>
+          <Field name="password" type="password" />
+          <button type='submit'>SignIn</button>
+          <button type='submit'>SignIn <br/>with Google</button>
+        </Form>
+      </Formik>
     </Fragment>
   )
 }

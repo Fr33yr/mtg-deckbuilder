@@ -6,7 +6,6 @@ import { Formik, Form, Field } from 'formik'
 import '../assets/css/main.css'
 import { saveDeck } from '../config/firebase'
 import { useAuth } from '../context/AuthContext'
-import { useFetch } from '../hooks/useFetch'
 
 //validates deck name
 const validateName = (values) => {
@@ -42,7 +41,8 @@ export function Save() {
                         <button className='save-btn'
                             type='submit'>Save</button>
                         <Field className='save-deckname'
-                            type="text" name="name" placeholder="Deck name.." />
+                            type="text" name="name" placeholder="Deck name.."
+                            maxlength="50" />
                     </div>
                 </Form>
             </Formik>

@@ -1,5 +1,5 @@
 //Resets
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,14 +8,41 @@
     letter-spacing: 1px;
 }
 
-//Variables
+html {
+    scroll-behavior: smooth;
+}
+
+//===Variables===
+
+//Colors
 $raisin-black: #1a1b25;
 $pich-black: #101319;
 $layout-black: #202632;
-$gray:#8D8AA8;
+$gray: #8D8AA8;
 $darkgray: #28282c95;
 $marigold: #ec8600;
 $tea-white: #CDEAC0;
+$fc-primary: rgb(233, 233, 246);
+
+//Fonts
+$ff-primary: 'Ibarra Real Nova', serif;
+
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+
+$fs-h1: 3rem;
+$fs-h2: 2.25rem;
+$fs-h3: 1.25rem;
+$fs-body: 1rem;
+
+
+@media (min-width: 800px) {
+    $fs-h1: 4.5rem;
+    $fs-h2: 3.75rem;
+    $fs-h3: 1.5rem;
+    $fs-body: 1.25rem;
+}
 
 //Mixins
 @mixin flex-column-center {
@@ -23,4 +50,3 @@ $tea-white: #CDEAC0;
     flex-direction: column;
     align-items: center;
 }
-
