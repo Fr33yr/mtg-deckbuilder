@@ -352,6 +352,7 @@ header {
   grid-auto-flow: row;
   width: 100%;
   margin-bottom: 1rem;
+  gap: 0;
 }
 
 /* target the active bullet */
