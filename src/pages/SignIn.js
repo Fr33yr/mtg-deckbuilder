@@ -18,7 +18,6 @@ export function SignIn() {
           <label>password</label>
           <Field name="password" type="password" />
           <button type='submit'>SignIn</button>
-          <button type='submit'>SignIn <br/>with Google</button>
         </Form>
       </Formik>
     </Fragment>

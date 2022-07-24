@@ -6,7 +6,7 @@ import { useAuth } from '../context/AuthContext'
 
 
 export default function Header() {
-  const { loginWithGoogle, user, logout } = useAuth()
+  const { user, logout } = useAuth()
   const [hide, setHide] = useState(false)
   let location = useLocation()
 
