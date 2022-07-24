@@ -11,11 +11,8 @@
     overflow: scroll;
     display: flex;
     flex-direction: column;
-    h3{
-        text-align: center;
-        color: $gray;
-    }
-    p{
+
+    p {
         color: $gray;
         padding: .5rem 0;
         text-align: center;
@@ -24,13 +21,18 @@
     }
 }
 
+.cardsamount {
+    text-align: center;
+    color: $gray;
+}
+
 @media only screen and (min-width: 1480px) {
-    .deckview{
+    .deckview {
         overflow-x: hidden;
     }
 }
 
-.decklist-item{
+.decklist-item {
     display: flex;
     flex-direction: row;
     border: 2px solid $gray;
@@ -38,8 +40,8 @@
     margin-top: .3rem;
 }
 
-.decklist-item__image--container{
-    max-height: 38px;
+.decklist-item__image--container {
+    max-height: 40px;
     min-width: 225px;
     overflow: hidden;
     width: 100%;
@@ -47,18 +49,15 @@
     border-right: 2px solid $gray;
 }
 
-.remove-btn{
+.remove-btn {
     height: 2.5rem;
     min-width: 40px;
-    border-radius: 1px;
-    background-color: $gray;
-    border: 2px solid wheat;
+    background-color: transparent;
     font-weight: bold;
     text-align: center;
+    border: none;
 }
 
-.remove-btn:hover{
-    background-color: $darkgray;
-    border-radius: 1px;
-    border: 2px solid wheat;
+.remove-btn:hover {
+    background-color: $gray;
 }

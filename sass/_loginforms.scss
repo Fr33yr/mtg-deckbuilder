@@ -1,5 +1,20 @@
 @import './_config.scss';
 
+//Mixins
+@mixin loginform-btn {
+    margin-top: 3rem;
+    height: 2rem;
+    padding: 0 .5rem;
+    border: 2px solid $marigold;
+    background-color: orange;
+}
+
+@mixin loginform-input {
+    margin: 0 .3rem;
+    margin-top: 2rem;
+}
+
+//Loginform
 .signinform{
     @include flex-column-center;
     margin: 0 auto;

@@ -13,13 +13,15 @@ export function DeckView() {
   return (
     <Fragment>
         <div className="deckview">
+            <div className="deckstats">
             { deckList.length > 0 && <h3 className="cardsamount">Cards: {deckList.flat().map((i)=>(i.amount)).reduce(add)}</h3>}
+            </div>
             <div className="deck">
                 {
                   deckList && deckList.map((item, index) => 
                   (
                   <div key={index} className="decklist-item">
-                  <p className='decklist-item__amount'>{item.amount} X </p>
+                  <p className='decklist-item__amount'>{item.amount}x</p>
                   <div className='decklist-item__image--container'>
                     <img className='decklist-item__image'
                      src={item.imageUrl} alt={item.name} />

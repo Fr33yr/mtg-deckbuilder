@@ -7,8 +7,8 @@
     text-decoration: none;
     letter-spacing: 1px;
 }
-//Variables
 
+//Variables
 $raisin-black: #1a1b25;
 $pich-black: #101319;
 $layout-black: #202632;
@@ -16,21 +16,11 @@ $gray:#8D8AA8;
 $darkgray: #28282c95;
 $marigold: #ec8600;
 $tea-white: #CDEAC0;
-//Mixins
 
+//Mixins
 @mixin flex-column-center {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-@mixin loginform-btn {
-    margin-top: 3rem;
-    height: 2rem;
-    padding: 0 .5rem;
-}
-
-@mixin loginform-input {
-    margin: 0 .3rem;
-    margin-top: 2rem;
-}

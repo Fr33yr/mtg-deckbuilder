@@ -105,6 +105,8 @@
   margin-top: 3rem;
   height: 2rem;
   padding: 0 0.5rem;
+  border: 2px solid #ec8600;
+  background-color: orange;
 }
 
 .loginform {
@@ -126,6 +128,8 @@
   margin-top: 3rem;
   height: 2rem;
   padding: 0 0.5rem;
+  border: 2px solid #ec8600;
+  background-color: orange;
 }
 
 .loginform p {
@@ -229,16 +233,17 @@ form input {
   display: flex;
   flex-direction: column;
 }
-.deckview h3 {
-  text-align: center;
-  color: #8D8AA8;
-}
 .deckview p {
   color: #8D8AA8;
   padding: 0.5rem 0;
   text-align: center;
   font-weight: bold;
   min-width: 40px;
+}
+
+.cardsamount {
+  text-align: center;
+  color: #8D8AA8;
 }
 
 @media only screen and (min-width: 1480px) {
@@ -255,7 +260,7 @@ form input {
 }
 
 .decklist-item__image--container {
-  max-height: 38px;
+  max-height: 40px;
   min-width: 225px;
   overflow: hidden;
   width: 100%;
@@ -266,17 +271,14 @@ form input {
 .remove-btn {
   height: 2.5rem;
   min-width: 40px;
-  border-radius: 1px;
-  background-color: #8D8AA8;
-  border: 2px solid wheat;
+  background-color: transparent;
   font-weight: bold;
   text-align: center;
+  border: none;
 }
 
 .remove-btn:hover {
-  background-color: rgba(40, 40, 44, 0.5843137255);
-  border-radius: 1px;
-  border: 2px solid wheat;
+  background-color: #8D8AA8;
 }
 
 body {
