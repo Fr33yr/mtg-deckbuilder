@@ -42,7 +42,7 @@ export function Save() {
                             type='submit'>Save</button>
                         <Field className='save-deckname'
                             type="text" name="name" placeholder="Deck name.."
-                            maxlength="50" />
+                            maxLength="50" />
                     </div>
                 </Form>
             </Formik>

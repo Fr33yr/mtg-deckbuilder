@@ -12,18 +12,18 @@ import { AuthProvider } from '../context/AuthContext'
 
 
 function App() {
-  const [value, setValue] = useState([])
+  const [searchResults, setSearchResults] = useState([])
 
   return (
     <Fragment>
       <BrowserRouter>
-        <CardsContext.Provider value={{ value, setValue }}>
+        <CardsContext.Provider value={{ searchResults, setSearchResults }}>
           <AuthProvider>
             <Layout>
               <div className="main">
                 <Routes>
-                  <Route path="/" element={<Home setValue={setValue}/>}></Route>
-                  <Route path="/deckbuilder" element={<Deckbuilder setValue={setValue}/>}></Route>
+                  <Route path="/" element={<Home setSearchResults={setSearchResults}/>}></Route>
+                  <Route path="/deckbuilder" element={<Deckbuilder setSearchResults={setSearchResults}/>}></Route>
                   <Route path="/login" element={<Login/>}></Route>
                   <Route path="/signin" element={<SignIn/>}></Route>
                 </Routes>

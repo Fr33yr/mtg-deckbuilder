@@ -12,8 +12,8 @@ import {useWindowDimensions} from '../hooks/useWindowDimensions'
 
 
 export function CardsView() {
-  const {value, setValue} = useContext(CardsContext)
-  const filterCardsImg = value.filter(card => card.imageUrl)
+  const {searchResults, setSearchResults} = useContext(CardsContext)
+  const filterCardsImg = searchResults.filter(card => card.imageUrl)
   const { height, width } = useWindowDimensions()
   const [chunkSize, setChunkSize] = useState(8)
   

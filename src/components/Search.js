@@ -11,7 +11,7 @@ import {useAuth} from '../context/AuthContext'
 
 
 export default function Search() {
-    const {value, setValue} = useContext(CardsContext)
+    const {searchResults, setSearchResults} = useContext(CardsContext)
     const {user} = useAuth()
 
     return (
@@ -26,7 +26,7 @@ export default function Search() {
                     }}
                     onSubmit={async (values)=> {
                         const res = await getCards(values.name, values.type, values.colors.join())
-                        setValue(res)
+                        setSearchResults(res)
                     }}>
                     <Form className='searchform'>
                         <label>
