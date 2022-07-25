@@ -53,6 +53,7 @@
     height: 2.5rem;
     min-width: 36px;
     background-color: transparent;
+    color: $gray;
     font-weight: bold;
     text-align: center;
     border: none;
@@ -60,4 +61,5 @@
 
 .remove-btn:hover {
     background-color: $gray;
+    color: black;
 }

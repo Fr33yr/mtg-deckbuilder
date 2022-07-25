@@ -331,6 +331,7 @@ html {
   height: 2.5rem;
   min-width: 36px;
   background-color: transparent;
+  color: #8D8AA8;
   font-weight: bold;
   text-align: center;
   border: none;
@@ -338,6 +339,7 @@ html {
 
 .remove-btn:hover {
   background-color: #8D8AA8;
+  color: black;
 }
 
 body {
