@@ -29,25 +29,25 @@ export default function Search() {
                         setSearchResults(res)
                     }}>
                     <Form className='searchform'>
-                        <label>
-                            <Field type="checkbox" name="colors" value="R" />
-                            red
+                        <label className='container-checkbox'>
+                            <Field type="checkbox" name="colors" value="R" className='color-checkbox'/>
+                            <span className="checkmark R" style={{border: "2px solid red"}}></span>
                         </label>
-                        <label>
-                            <Field type="checkbox" name="colors" value="G" />
-                            green
+                        <label className='container-checkbox'>
+                            <Field type="checkbox" name="colors" value="G" className='color-checkbox'/>
+                            <span className="checkmark G" style={{border: "2px solid green" }}></span>
                         </label>
-                        <label>
-                            <Field type="checkbox" name="colors" value="U" />
-                            blue
+                        <label className='container-checkbox'>
+                            <Field type="checkbox U" name="colors" value="U" className='color-checkbox'/>
+                            <span className="checkmark" style={{border: "2px solid blue"}}></span>
                         </label>
-                        <label>
-                            <Field type="checkbox" name="colors" value="B" />
-                            black
+                        <label className='container-checkbox'>
+                            <Field type="checkbox B" name="colors" value="B" className='color-checkbox'/>
+                            <span className="checkmark" style={{border: "2px solid black"}}></span>
                         </label>
-                        <label>
-                            <Field type="checkbox" name="colors" value="W" />
-                            white
+                        <label className='container-checkbox'>
+                            <Field type="checkbox" name="colors" value="W" className='color-checkbox'/>
+                            <span className="checkmark W" style={{border: "2px solid yellow"}}></span>
                         </label>
 
                         <label>

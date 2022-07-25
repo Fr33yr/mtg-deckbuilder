@@ -11,13 +11,13 @@ import {reset} from '../store/deckSlice'
 export function Home(props) {
   const { user } = useAuth()
   const [data, setData] = useFetch(user)
-  const {setValue} = props
+  const {setSearchResults} = props
   const dispatch = useDispatch()
   let location = useLocation()
   
   useEffect(()=>{
     if(location.pathname === '/'){
-      setValue([])
+      setSearchResults([])
     }
   },[location])
 
