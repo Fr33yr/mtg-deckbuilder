@@ -40,10 +40,6 @@ export function AuthProvider({ children }) {
         })
     }, [])
 
-    const handleGoogleSingIn = async () => {
-        await loginWithGoogle()
-    }
-
 
     return (
         <AuthContext.Provider
