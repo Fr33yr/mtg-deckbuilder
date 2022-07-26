@@ -14,7 +14,6 @@ export function Login() {
     setError('')
     try {
       await login(email, password)
-      navigate('/')
     } catch (error) {
       if (error.code === 'auth/user-not-found') {
         setError('Invalid User')
@@ -30,7 +29,7 @@ export function Login() {
       }
     }
   }
-  error && console.log(error);
+  
 
   return (
     <Fragment>

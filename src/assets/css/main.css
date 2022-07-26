@@ -53,14 +53,17 @@ html {
 .deckitem {
   margin-left: 3rem;
   border: 2px solid #8D8AA8;
-  max-height: 4rem;
-  width: 5rem;
+  max-height: 14vh;
+  width: 10vw;
+  min-width: 100px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .deckitem-name {
+  padding: 0.4rem;
+  line-break: auto;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -68,6 +71,7 @@ html {
   text-align: center;
   cursor: pointer;
   color: #8D8AA8;
+  word-wrap: break-word;
 }
 
 .deckitem-name:hover {
@@ -240,7 +244,7 @@ html {
 }
 
 .searchform {
-  min-width: 50vw;
+  max-width: 50vw;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -306,7 +310,7 @@ form input {
 
 /* When the checkbox is checked, add a blue background */
 .container-checkbox input:checked ~ .checkmark {
-  background-color: #2196F3;
+  background-color: #ec8600;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -326,7 +330,7 @@ form input {
   top: 5px;
   width: 5px;
   height: 10px;
-  border: solid white;
+  border: transparent;
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
 }
@@ -456,6 +460,10 @@ header {
   border-radius: 2px;
   cursor: pointer;
   font-weight: 500;
+}
+
+.login-btn:visited {
+  color: black;
 }
 
 .login-btn:hover {

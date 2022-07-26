@@ -30,18 +30,22 @@
 .deckitem {
     margin-left: 3rem;
     border: 2px solid $gray;
-    max-height: 4rem;
-    width: 5rem;
+    max-height: 14vh;
+    width: 10vw;
+    min-width: 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .deckitem-name{
+    padding: .4rem;
+    line-break: auto;
     user-select: none;
     text-align: center;
     cursor: pointer;
     color: $gray;
+    word-wrap: break-word;
 }
 
 .deckitem-name:hover{

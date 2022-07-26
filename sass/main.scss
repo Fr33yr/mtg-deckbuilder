@@ -57,6 +57,10 @@ header {
     font-weight: $fw-medium;
 }
 
+.login-btn:visited{
+    color: black;
+}
+
 .login-btn:hover{
     border: 2px solid orange;
 }
