@@ -6,14 +6,16 @@ import { useAuth } from '../context/AuthContext'
 import '../assets/css/main.css'
 
 export function Login() {
-  const { loginWithGoogle, login } = useAuth()
+  const { loginWithGoogle, logIn } = useAuth()
   const navigate = useNavigate()
   const [error, setError] = useState('')
 
-  const handleSubmit = async (email, password) => {
+  const handleSubmit = async (values) => {
+    const {email, password} = values
+
     setError('')
     try {
-      await login(email, password)
+      await logIn(email, password)
     } catch (error) {
       if (error.code === 'auth/user-not-found') {
         setError('Invalid User')
@@ -37,7 +39,7 @@ export function Login() {
         email: '',
         password: ''
       }}
-      onSubmit={(values)=>handleSubmit(values.email, values.password)}>
+      onSubmit={(values)=>handleSubmit(values)}>
         <Form className='loginform'>
           <label>email</label>
           <Field name="email" type="email" />
