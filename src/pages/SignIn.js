@@ -24,7 +24,7 @@ export function SignIn() {
     useEffect(()=>{
       error && toast.error(error, {
         style: {
-          borderRadius: '10px',
+          borderRadius: "5px",
           background: '#333',
           color: '#fff',
         }
