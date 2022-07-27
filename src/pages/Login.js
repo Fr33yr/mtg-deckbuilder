@@ -1,6 +1,7 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import { Formik, Form, Field } from 'formik'
 import { Link, useNavigate } from 'react-router-dom'
+import { toast, Toaster } from 'react-hot-toast'
 
 import { useAuth } from '../context/AuthContext'
 import '../assets/css/main.css'
@@ -11,8 +12,7 @@ export function Login() {
   const [error, setError] = useState('')
 
   const handleSubmit = async (values) => {
-    const {email, password} = values
-
+    const { email, password } = values
     setError('')
     try {
       await logIn(email, password)
@@ -28,28 +28,44 @@ export function Login() {
       }
       else if (error.code === 'auth/missing-email') {
         setError('Write an email')
+      } else if (error.code === 'auth/too-many-requests') {
+        setError('Too many attempts')
       }
     }
   }
-  
+
+  useEffect(() => {
+    error && toast.error(error, {
+      style: {
+        borderRadius: "10px",
+        background: "#333",
+        color: "#fff"
+      }
+    })
+  }, [error])
 
   return (
     <Fragment>
-      <Formik initialValues={{
-        email: '',
-        password: ''
-      }}
-      onSubmit={(values)=>handleSubmit(values)}>
-        <Form className='loginform'>
-          <label>email</label>
-          <Field name="email" type="email" />
-          <label>password</label>
-          <Field name="password" type="password" />
-          <button type='submit'>LogIn</button>
-          <button onClick={()=>loginWithGoogle()}>Login <br />with Google</button>
-          <p>Dont have an account? <Link to="/signin">SignIn</Link></p>
-        </Form>
-      </Formik>
+      <Toaster
+        position='top-center'
+      />
+      <div  className='loginform'>
+        <Formik initialValues={{
+          email: '',
+          password: ''
+        }}
+          onSubmit={(values) => handleSubmit(values)}>
+          <Form>
+            <label>email</label>
+            <Field name="email" type="email" />
+            <label>password</label>
+            <Field name="password" type="password" />
+            <button type='submit'>LogIn</button>
+          </Form>
+        </Formik>
+        <button onClick={() => loginWithGoogle()}>Login <br />with Google</button>
+        <p>Dont have an account? <Link to="/signin">SignIn</Link></p>
+      </div>
     </Fragment>
   )
 }

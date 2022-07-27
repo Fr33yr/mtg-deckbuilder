@@ -50,11 +50,13 @@
     margin: 0 auto;
     margin-top: 20vh;
     height: fit-content;
+    width: 276px;
     border: 2px solid $gray;
     color: wheat;
     padding: 2rem 0;
     border-radius: 2px;
     box-shadow: 1px 3px 5px 3px rgba(0, 0, 0, 0.207);
+    text-align: center;
 }
 
 .loginform input{
