@@ -1,0 +1,34 @@
+@import './config.scss';
+
+.toast-confirmdelete {
+    display: flex;
+    flex-direction: column;
+
+    div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 1rem;
+
+        button:nth-child(1) {
+            opacity: 1;
+            background-color: gray;
+            border: none;
+            padding: .1em .3em;
+        }
+
+        button:nth-child(1):hover {
+            background-color: $gray;
+        }
+
+        button:nth-child(2) {
+            opacity: 1;
+            background-color: #c9170e;
+            border: none;
+            padding: .1em .3em;
+        }
+        button:nth-child(2):hover{
+            background-color: red;
+        }
+    }
+}

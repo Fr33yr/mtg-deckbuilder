@@ -414,6 +414,48 @@ html {
   color: black;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.toast-confirmdelete {
+  display: flex;
+  flex-direction: column;
+}
+.toast-confirmdelete div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 1rem;
+}
+.toast-confirmdelete div button:nth-child(1) {
+  opacity: 1;
+  background-color: gray;
+  border: none;
+  padding: 0.1em 0.3em;
+}
+.toast-confirmdelete div button:nth-child(1):hover {
+  background-color: #8D8AA8;
+}
+.toast-confirmdelete div button:nth-child(2) {
+  opacity: 1;
+  background-color: #c9170e;
+  border: none;
+  padding: 0.1em 0.3em;
+}
+.toast-confirmdelete div button:nth-child(2):hover {
+  background-color: red;
+}
+
 body {
   margin: 0;
   padding: 0;

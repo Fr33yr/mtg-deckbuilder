@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import {useDispatch} from 'react-redux'
+import {Toaster, toast} from 'react-hot-toast'
 
 import { useAuth } from '../context/AuthContext'
 import { useFetch } from '../hooks/useFetch'
@@ -27,6 +28,8 @@ export function Home(props) {
 
   return (
     <Fragment>
+      <Toaster
+      position='top-center'/>
       <div className='home'>
         <Link to="/deckbuilder" className='newdeck'
         onClick={handleOnClick}>New <br />Deck</Link>
