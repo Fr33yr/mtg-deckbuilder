@@ -28,7 +28,7 @@ export function decreaseAmount(arr, id) {
     }
 }
 
-function getColors(arr) {
+export function getColors(arr) {
     const flattend = arr.map(element => element.colors).flatMap(x => x)
     let filtered = flattend.filter((element, index) => {
         return flattend.indexOf(element) === index
