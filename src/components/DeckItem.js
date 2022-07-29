@@ -51,7 +51,7 @@ export function DeckItem(props) {
           className='deckitem-name'>{deckName}</h3>
         <div className='deckitem-colors'>
           <p>Colors: </p>
-          {getColors(deckList).map((element, index) => (
+          {getColors(deckList).map((element, index) => (element &&
             <span key={index}
               style={{ backgroundColor: `${element.toLowerCase()}` }}
             ></span>))}
