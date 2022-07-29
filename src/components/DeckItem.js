@@ -47,16 +47,24 @@ export function DeckItem(props) {
   return (
     <Fragment>
       <div className='deckitem'>
-        <p onClick={handleSelect}
-          className='deckitem-name'>{deckName}</p>
+        <h3 onClick={handleSelect}
+          className='deckitem-name'>{deckName}</h3>
         <div className='deckitem-colors'>
+          <p>Colors: </p>
           {getColors(deckList).map((element, index) => (
             <span key={index}
               style={{ backgroundColor: `${element.toLowerCase()}` }}
             ></span>))}
         </div>
-        <button className='deckitem-delete__btn'
-          onClick={handleDelete}>Delete</button>
+        <p>Cards: 60</p>
+        <div className="deckitem-btns">
+          <button onClick={handleDelete}>
+            Delete
+          </button>
+          <button>
+            View deck
+          </button>
+        </div>
       </div>
     </Fragment>
   )

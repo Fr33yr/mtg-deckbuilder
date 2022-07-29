@@ -52,50 +52,63 @@ html {
 
 .deckitem {
   margin-left: 3rem;
-  border: 2px solid #8D8AA8;
-  max-height: 14vh;
-  width: 10vw;
-  min-width: 100px;
+  padding: 15px 10px;
+  background-color: #1e1e1e;
+  height: 170px;
+  width: 180px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 1px 3px 5px 3px rgba(0, 0, 0, 0.207);
 }
 
-.deckitem-name {
-  padding: 0.4rem;
+.deckitem h3 {
   line-break: auto;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  text-align: center;
+  text-align: left;
   cursor: pointer;
-  color: #8D8AA8;
+  color: #CDEAC0;
   word-wrap: break-word;
+}
+
+.deckitem p {
+  text-align: left;
+  color: #8D8AA8;
 }
 
 .deckitem-name:hover {
   background-color: rgb(53, 50, 50);
 }
 
-.deckitem-delete__btn {
+.deckitem-btns button:nth-child(1) {
   cursor: pointer;
   background-color: #c9170e;
   border: 2px solid brown;
   border-top: 0;
   border-radius: 2px;
   height: 25px;
+  width: 80px;
 }
 
-.deckitem-delete__btn:hover {
+.deckitem-btns button:nth-child(1):hover {
   background-color: red;
+}
+
+.deckitem-btns button:nth-child(2) {
+  height: 25px;
+  width: 80px;
 }
 
 .deckitem-colors {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
+}
+.deckitem-colors p {
+  margin-right: 0.5em;
 }
 
 .deckitem-colors span {
