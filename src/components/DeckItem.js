@@ -11,7 +11,8 @@ export function DeckItem(props) {
   const { user, data, setData, id, deckName, deckList } = props
   const dispatch = useDispatch()
   let navigate = useNavigate()
-  //console.log();
+  const add = (acc, curr) => acc + curr
+  
   const handleDelete = () => {
 
     toast((t) => (
@@ -34,7 +35,7 @@ export function DeckItem(props) {
       style: {
         backgroundColor: "#333",
         color: "#fff",
-        borderRadius: "5px"
+        borderRadius: "2px"
       }
     })
   }
@@ -43,7 +44,7 @@ export function DeckItem(props) {
     dispatch(selectDeck({ deckName, deckList, id }))
     navigate("/deckbuilder")
   }
-
+data && console.log(data);
   return (
     <Fragment>
       <div className='deckitem'>
@@ -57,7 +58,7 @@ export function DeckItem(props) {
               style={{ backgroundColor: `${element.toLowerCase()}` }}
             ></span>))}
         </div>
-        <p>Cards: 60</p>
+        <p>Cards: {deckList.flat().map((i)=>(i.amount)).reduce(add)}</p>
         <div className="deckitem-btns">
           <button onClick={handleDelete}>
             Delete

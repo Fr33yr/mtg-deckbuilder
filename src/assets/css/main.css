@@ -70,7 +70,6 @@ html {
   background-color: #c9170e;
   border: 2px solid brown;
   border-top: 0;
-  border-radius: 2px;
   height: 25px;
   width: 70px;
 }
@@ -455,7 +454,7 @@ html {
   opacity: 1;
   background-color: gray;
   border: none;
-  padding: 0.1em 0.3em;
+  padding: 0.2em 0.3em;
 }
 .toast-confirmdelete div button:nth-child(1):hover {
   background-color: #8D8AA8;
@@ -464,7 +463,7 @@ html {
   opacity: 1;
   background-color: #c9170e;
   border: none;
-  padding: 0.1em 0.3em;
+  padding: 0.2em 0.3em;
 }
 .toast-confirmdelete div button:nth-child(2):hover {
   background-color: red;
@@ -499,7 +498,8 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  margin: 10px;
+  margin: 0.9rem 0;
+  margin-left: 1rem;
   text-align: center;
   background-color: rgba(255, 68, 0, 0.792);
   padding: 5px;
@@ -524,12 +524,11 @@ header {
 .login-btn {
   position: absolute;
   right: 0;
-  margin: 0.8rem 0;
-  margin-right: 1.5rem;
+  margin: 0.9rem 0;
+  margin-right: 1rem;
   padding: 0.5em 1em;
   background-color: orangered;
   border: 2px solid orangered;
-  border-radius: 2px;
   cursor: pointer;
   font-weight: 500;
 }
