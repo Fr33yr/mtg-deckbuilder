@@ -44,7 +44,8 @@ export function DeckItem(props) {
     dispatch(selectDeck({ deckName, deckList, id }))
     navigate("/deckbuilder")
   }
-data && console.log(data);
+
+  
   return (
     <Fragment>
       <div className='deckitem'>
