@@ -47,8 +47,9 @@ export function DeckItem(props) {
   return (
     <Fragment>
       <div className='deckitem'>
-        <h3 onClick={handleSelect}
-          className='deckitem-name'>{deckName}</h3>
+        <h3 className='deckitem-name'>
+          {deckName}
+        </h3>
         <div className='deckitem-colors'>
           <p>Colors: </p>
           {getColors(deckList).map((element, index) => (element &&
@@ -61,8 +62,8 @@ export function DeckItem(props) {
           <button onClick={handleDelete}>
             Delete
           </button>
-          <button>
-            View deck
+          <button onClick={handleSelect}>
+            View
           </button>
         </div>
       </div>

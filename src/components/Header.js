@@ -40,7 +40,7 @@ export default function Header(props) {
       {hide ? <header></header> :
         <header>
           {location.pathname === '/' ? <Link to="/deckbuilder" onClick={handleOnClick} className='newdeck'>
-            New <br />Deck
+           + New deck
           </Link> : ''
           }
 

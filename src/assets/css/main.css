@@ -50,7 +50,6 @@ html {
       -ms-user-select: none;
           user-select: none;
   text-align: left;
-  cursor: pointer;
   color: #CDEAC0;
   word-wrap: break-word;
 }
@@ -60,8 +59,10 @@ html {
   color: #8D8AA8;
 }
 
-.deckitem-name:hover {
-  background-color: rgb(53, 50, 50);
+.deckitem-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .deckitem-btns button:nth-child(1) {
@@ -71,7 +72,7 @@ html {
   border-top: 0;
   border-radius: 2px;
   height: 25px;
-  width: 80px;
+  width: 70px;
 }
 
 .deckitem-btns button:nth-child(1):hover {
@@ -79,8 +80,14 @@ html {
 }
 
 .deckitem-btns button:nth-child(2) {
+  background-color: orangered;
+  border: 2px solid orangered;
   height: 25px;
-  width: 80px;
+  width: 70px;
+}
+
+.deckitem-btns button:nth-child(2):hover {
+  border: 2px solid orange;
 }
 
 .deckitem-colors {
