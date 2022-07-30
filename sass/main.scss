@@ -30,11 +30,22 @@ header {
     justify-content: space-around;
 }
 
-.header-user{
+.newdeck{
     position: absolute;
+    top: 0;
     left: 0;
-    margin-left: 3rem;
-    padding-top: .6em;
+    margin: 10px;
+    text-align: center;
+    background-color: rgba(255, 68, 0, 0.792);
+    padding: 5px;
+}
+
+.newdeck:hover{
+    background-color: orangered;
+}
+
+.newdeck:visited{
+    color: black;
 }
 
 .login-warn{

@@ -4,27 +4,7 @@
     padding: 2rem;
     display: flex;
     flex-direction: row;
-}
-
-.newdeck {
-    color: $pich-black;
-    background-color: #c9170e;
-    border: 2px solid black;
-    color: $pich-black;
-    min-width: 4rem;
-    max-height: 4rem;
-    padding-top: .55rem;
-    cursor: pointer;
-    text-align: center;
-}
-
-.newdeck:visited {
-    color: $pich-black;
-}
-
-
-.newdeck:hover {
-    background-color: red;
+    width: 100%;
 }
 
 .deckitem {
@@ -48,7 +28,7 @@
     word-wrap: break-word;
 }
 
-.deckitem p{
+.deckitem p {
     text-align: left;
     color: $color-secondary;
 }
@@ -71,7 +51,7 @@
     background-color: red;
 }
 
-.deckitem-btns button:nth-child(2){
+.deckitem-btns button:nth-child(2) {
     height: 25px;
     width: 80px;
 }
@@ -80,7 +60,8 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    p{
+
+    p {
         margin-right: .5em;
     }
 }

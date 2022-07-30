@@ -4,10 +4,10 @@ import Footer from './Footer'
 import Header from './Header'
 
 export function Layout(props) {
-  const {children} = props
+  const {children, setSearchResults} = props
   return (
     <Fragment>
-        <Header></Header>
+        <Header setSearchResults={setSearchResults}></Header>
         {children}
         <Footer></Footer>
     </Fragment>

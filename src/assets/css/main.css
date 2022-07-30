@@ -28,26 +28,7 @@ html {
   padding: 2rem;
   display: flex;
   flex-direction: row;
-}
-
-.newdeck {
-  color: #101319;
-  background-color: #c9170e;
-  border: 2px solid black;
-  color: #101319;
-  min-width: 4rem;
-  max-height: 4rem;
-  padding-top: 0.55rem;
-  cursor: pointer;
-  text-align: center;
-}
-
-.newdeck:visited {
-  color: #101319;
-}
-
-.newdeck:hover {
-  background-color: red;
+  width: 100%;
 }
 
 .deckitem {
@@ -507,11 +488,22 @@ header {
   justify-content: space-around;
 }
 
-.header-user {
+.newdeck {
   position: absolute;
+  top: 0;
   left: 0;
-  margin-left: 3rem;
-  padding-top: 0.6em;
+  margin: 10px;
+  text-align: center;
+  background-color: rgba(255, 68, 0, 0.792);
+  padding: 5px;
+}
+
+.newdeck:hover {
+  background-color: orangered;
+}
+
+.newdeck:visited {
+  color: black;
 }
 
 .login-warn {

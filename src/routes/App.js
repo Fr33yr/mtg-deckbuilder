@@ -19,10 +19,10 @@ function App() {
       <BrowserRouter>
         <CardsContext.Provider value={{ searchResults, setSearchResults }}>
           <AuthProvider>
-            <Layout>
+            <Layout setSearchResults={setSearchResults}>
               <div className="main">
                 <Routes>
-                  <Route path="/" element={<Home setSearchResults={setSearchResults}/>}></Route>
+                  <Route path="/" element={<Home/>}></Route>
                   <Route path="/deckbuilder" element={<Deckbuilder setSearchResults={setSearchResults}/>}></Route>
                   <Route path="/login" element={<Login/>}></Route>
                   <Route path="/signin" element={<SignIn/>}></Route>
