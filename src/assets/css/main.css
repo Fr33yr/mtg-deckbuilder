@@ -605,13 +605,19 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 .card-btn {
   padding: 0 0.5em;
   font-weight: bold;
-  background-color: orangered;
-  border: 2px solid orangered;
+  background-color: rgba(255, 68, 0, 0.771);
   cursor: pointer;
+  border: none;
 }
 
 .card-btn:hover {
-  border: 2px solid orange;
+  background-color: orangered;
+}
+
+.card-btn:disabled {
+  cursor: auto;
+  background-color: transparent;
+  border: 2px solid #8D8AA8;
 }
 
 footer {
