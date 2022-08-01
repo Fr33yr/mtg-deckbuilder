@@ -10,9 +10,9 @@ export function DeckView() {
   const dispatch = useDispatch()
   const add = (acc, curr) => acc + curr
 
-  useEffect(()=>{
+  useEffect(() => {
     deckList.length && dispatch(getAmount(deckList.flat().map((i) => (i.amount)).reduce(add)))
-  },[deckList])
+  }, [deckList])
 
   return (
     <Fragment>
@@ -24,7 +24,7 @@ export function DeckView() {
             </h3>
           }
         </div>
-        <div className="deck">
+        
           {
             deckList && deckList.map((item, index) =>
             (
@@ -35,10 +35,13 @@ export function DeckView() {
                     src={item.imageUrl} alt={item.name} />
                 </div>
                 <button className='remove-btn'
-                  onClick={() => dispatch(rermoveCards(item))}>-</button></div>
+                  onClick={() => dispatch(rermoveCards(item))}>
+                  -
+                </button>
+              </div>
             ))
           }
-        </div>
+        
       </div>
     </Fragment>
   )

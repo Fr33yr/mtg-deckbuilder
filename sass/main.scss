@@ -132,6 +132,15 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     }
 }
 
+@media only screen and (max-width: 480px) {
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+        width: 100%;
+    }
+}
+
 //===Card===
 .card {
     width: 8rem;

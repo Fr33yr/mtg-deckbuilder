@@ -26,7 +26,6 @@ export default function Search() {
                     }}
                     onSubmit={async (values)=> {
                         const res = await getCards(values.name, values.type, values.colors.join())
-                        console.log(res);
                         setSearchResults(res)
                     }}>
                     <Form className='searchform' style={user? {} : {margin: "0 auto"}}>

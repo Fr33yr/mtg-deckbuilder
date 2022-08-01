@@ -3,7 +3,7 @@
 //===Deck===
 .deckview {
     max-height: 83vh;
-    min-width: 22vw;
+    min-width: 340px;
     padding-left: .5rem;
     padding-right: .5rem;
     padding-top: 52px;
@@ -11,14 +11,6 @@
     overflow: scroll;
     display: flex;
     flex-direction: column;
-
-    p {
-        color: $gray;
-        padding: .5rem 0;
-        text-align: center;
-        font-weight: bold;
-        min-width: 40px;
-    }
 }
 
 .cardsamount {
@@ -38,20 +30,28 @@
     border: 2px solid $gray;
     border-radius: 3px;
     margin-top: .3rem;
+    min-width: 310px
+}
+
+.decklist-item p{
+    color: $gray;
+    padding: .5rem 0;
+    text-align: center;
+    font-weight: bold;
+    min-width: 40px;
 }
 
 .decklist-item__image--container {
     max-height: 40px;
     min-width: 225px;
     overflow: hidden;
-    width: 100%;
     border-left: 2px solid $gray;
     border-right: 2px solid $gray;
 }
 
 .remove-btn {
-    height: 2.5rem;
-    min-width: 36px;
+    height: 40px;
+    min-width: 40px;
     background-color: transparent;
     color: $gray;
     font-weight: bold;

@@ -14,12 +14,20 @@ import {useWindowDimensions} from '../hooks/useWindowDimensions'
 export function CardsView() {
   const {searchResults, setSearchResults} = useContext(CardsContext)
   const filterCardsImg = searchResults.filter(card => card.imageUrl)
+  let filteredCardsName = filterCardsImg.filter((value, index, self) => (
+    index === self.findIndex((t) => (
+      t.name === value.name
+    ))
+  ))
   const { height, width } = useWindowDimensions()
   const [chunkSize, setChunkSize] = useState(8)
   
 
   useEffect(()=>{
-    if(width <= 580){
+    if(width <= 480){
+      setChunkSize(2)
+    }
+    else if(width <= 580){
       setChunkSize(4)
     }
     else if(width <= 800){
@@ -30,7 +38,7 @@ export function CardsView() {
     }
   },[width])
 
-  let cards = chunkArray(filterCardsImg, chunkSize)
+  let cards = chunkArray(filteredCardsName, chunkSize)
   
   return (
     <Fragment>
@@ -38,7 +46,8 @@ export function CardsView() {
         <Swiper
           slidesPerView={1}
           modules={[Pagination]}
-          pagination={{clickable:true}}>
+          pagination={{clickable:true}}
+          >
           <div className="cards-slide">
             {
               cards.map((item, index) => (
