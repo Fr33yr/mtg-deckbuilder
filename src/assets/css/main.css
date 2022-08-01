@@ -68,7 +68,7 @@ html {
 .deckitem-btns button:nth-child(1) {
   cursor: pointer;
   background-color: #c9170e;
-  border: 2px solid brown;
+  border: none;
   border-top: 0;
   height: 25px;
   width: 70px;
@@ -79,14 +79,15 @@ html {
 }
 
 .deckitem-btns button:nth-child(2) {
-  background-color: orangered;
-  border: 2px solid orangered;
+  cursor: pointer;
+  background-color: rgba(255, 68, 0, 0.792);
+  border: none;
   height: 25px;
   width: 70px;
 }
 
 .deckitem-btns button:nth-child(2):hover {
-  border: 2px solid orange;
+  background-color: orangered;
 }
 
 .deckitem-colors {
@@ -234,13 +235,14 @@ html {
 .save-btn {
   height: 25px;
   border-radius: 2px;
-  border: 2px solid orangered;
-  background-color: orangered;
+  background-color: rgba(255, 68, 0, 0.792);
   padding: 0 1.3em;
+  cursor: pointer;
+  border: none;
 }
 
 .save-btn:hover {
-  border: 2px solid #ec8600;
+  background-color: orangered;
 }
 
 .save-deckname {
@@ -271,14 +273,15 @@ html {
 
 .find-btn {
   height: 25px;
-  background-color: orangered;
-  border: 2px solid orangered;
+  background-color: rgba(255, 68, 0, 0.792);
+  border: none;
   border-radius: 2px;
   padding: 0 0.5em;
+  cursor: pointer;
 }
 
 .find-btn:hover {
-  border: 2px solid orange;
+  background-color: orangered;
 }
 
 form input {
@@ -367,11 +370,13 @@ html {
 }
 
 .deckview {
-  max-height: 83vh;
-  min-width: 340px;
+  z-index: 100;
+  margin-top: 6vh;
+  max-height: 77vh;
+  min-width: 100%;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  padding-top: 52px;
+  padding-top: 10px;
   background-color: #1a1b25;
   overflow: scroll;
   display: flex;
@@ -391,10 +396,12 @@ html {
 .decklist-item {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-self: center;
   border: 2px solid #8D8AA8;
   border-radius: 3px;
   margin-top: 0.3rem;
-  min-width: 310px;
+  max-width: 280px;
 }
 
 .decklist-item p {
@@ -402,7 +409,8 @@ html {
   padding: 0.5rem 0;
   text-align: center;
   font-weight: bold;
-  min-width: 40px;
+  min-width: 28px;
+  border-right: 2px solid #8D8AA8;
 }
 
 .decklist-item__image--container {
@@ -415,7 +423,7 @@ html {
 
 .remove-btn {
   height: 40px;
-  min-width: 40px;
+  min-width: 28px;
   background-color: transparent;
   color: #8D8AA8;
   font-weight: bold;
@@ -426,6 +434,18 @@ html {
 .remove-btn:hover {
   background-color: #8D8AA8;
   color: black;
+}
+
+.toggle-btn__deck {
+  cursor: pointer;
+  width: 40px;
+  border-radius: 2px;
+  border: transparent;
+  background-color: rgba(255, 68, 0, 0.792);
+}
+
+.toggle-btn__deck:hover {
+  background-color: orangered;
 }
 
 * {
@@ -600,10 +620,10 @@ header {
   margin: 0.9rem 0;
   margin-right: 1rem;
   padding: 0.5em 1em;
-  background-color: orangered;
-  border: 2px solid orangered;
+  background-color: rgba(255, 68, 0, 0.792);
   cursor: pointer;
   font-weight: 500;
+  border: none;
 }
 
 .login-btn:visited {
@@ -611,18 +631,32 @@ header {
 }
 
 .login-btn:hover {
-  border: 2px solid orange;
+  background-color: orangered;
+}
+
+.toggle-btn__cardsview {
+  cursor: pointer;
+  width: 40px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  border: transparent;
+  background-color: rgba(255, 68, 0, 0.792);
+}
+
+.toggle-btn__cardsview:hover {
+  background-color: orangered;
 }
 
 .cardsviewer {
-  padding-top: 4.6rem;
+  padding-top: 3.5rem;
   height: 90vh;
-  min-width: 78vw;
+  min-width: 100%;
 }
 
 .swiper-wrapper {
   height: 100vh;
-  padding-bottom: 1.2rem;
+  padding-bottom: 0.4rem;
 }
 
 .swiper-slide {

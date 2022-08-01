@@ -2,11 +2,13 @@
 
 //===Deck===
 .deckview {
-    max-height: 83vh;
-    min-width: 340px;
+    z-index: 100;
+    margin-top: 6vh;
+    max-height: 77vh;
+    min-width: 100%;
     padding-left: .5rem;
     padding-right: .5rem;
-    padding-top: 52px;
+    padding-top: 10px;
     background-color: $raisin-black;
     overflow: scroll;
     display: flex;
@@ -27,10 +29,12 @@
 .decklist-item {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-self: center;
     border: 2px solid $gray;
     border-radius: 3px;
     margin-top: .3rem;
-    min-width: 310px
+    max-width: 280px;
 }
 
 .decklist-item p{
@@ -38,7 +42,8 @@
     padding: .5rem 0;
     text-align: center;
     font-weight: bold;
-    min-width: 40px;
+    min-width: 28px;
+    border-right: 2px solid $gray;
 }
 
 .decklist-item__image--container {
@@ -51,7 +56,7 @@
 
 .remove-btn {
     height: 40px;
-    min-width: 40px;
+    min-width: 28px;
     background-color: transparent;
     color: $gray;
     font-weight: bold;
@@ -62,4 +67,16 @@
 .remove-btn:hover {
     background-color: $gray;
     color: black;
+}
+
+.toggle-btn__deck{
+    cursor: pointer;
+    width: 40px;
+    border-radius: 2px;
+    border: transparent;
+    background-color: $btn-bg-color;
+}
+
+.toggle-btn__deck:hover{
+    background-color: $btn-hover-bg-color;
 }
