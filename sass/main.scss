@@ -53,9 +53,10 @@ header {
 .login-warn{
     text-align: left;
     position: absolute;
-    right: 0;
+    left: 0;
     padding-top: .34em;
-    margin-right: 7.5rem;
+    margin-left: 4rem;
+    color: $fc-primary;
 }
 
 .login-btn {

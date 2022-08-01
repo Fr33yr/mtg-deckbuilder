@@ -44,10 +44,6 @@ export default function Header(props) {
           </Link> : ''
           }
 
-          {user ? "" :
-            <p className='login-warn'>Login to save <br />your builds</p>
-          }
-
           {user ? <button className='login-btn'
             onClick={handleLogout}>Logout</button> :
             <Link to={"/login"} target="_blank" className='login-btn'

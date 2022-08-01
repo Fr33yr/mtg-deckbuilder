@@ -17,6 +17,10 @@ export function Home() {
 
       <div className='home'>
         {
+          user ? "" : <p className='login-warn'>Login to save <br />your builds</p>
+        }
+
+        {
           data && data.map((deck) =>
             <DeckItem {...deck} user={user} key={deck.id}
               data={data} setData={setData} />)

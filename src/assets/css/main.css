@@ -29,8 +29,16 @@ html {
   display: flex;
   flex-direction: row;
   width: 100%;
+  overflow-y: scroll;
 }
 
+@media only screen and (max-width: 480px) {
+  .home {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-auto-flow: row;
+  }
+}
 .deckitem {
   margin-left: 3rem;
   padding: 15px 10px;
@@ -609,9 +617,10 @@ header {
 .login-warn {
   text-align: left;
   position: absolute;
-  right: 0;
+  left: 0;
   padding-top: 0.34em;
-  margin-right: 7.5rem;
+  margin-left: 4rem;
+  color: rgb(233, 233, 246);
 }
 
 .login-btn {
