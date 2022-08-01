@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import '../assets/css/main.css'
 import { addCards, rermoveCards } from '../store/deckSlice'
+import { getAmount } from '../utils/getAmount'
 
 export function Card(props) {
   let { name, imageUrl, id, colors } = props
@@ -26,13 +27,18 @@ export function Card(props) {
   return (
     <Fragment>
       <div className="card">
-        <button className='card-btn' onClick={handleOnClick}
-          disabled={cardsAmount >= 150? true : false}> 
-          +
-        </button>
-        <button className='card-btn' onClick={()=>handleDelete(id)}>
-          -
-        </button>
+        <div>
+          <button className='card-btn__add' onClick={handleOnClick}
+            disabled={cardsAmount >= 150 ? true : false}>
+            +
+          </button>
+          <p>
+            {getAmount(deckList, id)}
+          </p>
+          <button className='card-btn__decrement' onClick={() => handleDelete(id)}>
+            -
+          </button>
+        </div>
         <img src={imageUrl} alt="mtg-card" unselectable='on'
           className='card-img' />
       </div>

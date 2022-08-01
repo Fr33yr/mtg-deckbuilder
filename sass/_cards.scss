@@ -7,32 +7,45 @@
     padding-bottom: 1rem;
 }
 
+.card div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    p{
+        text-align: center;
+        margin: 0 .2rem;
+        color: $gray;
+    }
+}
+
 .card-img {
+    margin-top: .2rem;
     width: 9rem;
     height: 13rem;
 }
 
-.card-btn:nth-child(1){
-    padding: 0 .5em;
+.card-btn__add{
     font-weight: bold;
     background-color: rgba(255, 68, 0, 0.771);
     cursor: pointer;
     border: none;
+    text-align: center;
+    width: 25px;
 }
 
-.card-btn:nth-child(1):hover{
+.card-btn__add:hover{
     background-color: orangered;
 }
 
-.card-btn:nth-child(1):disabled{
+.card-btn__add:disabled{
     cursor: auto;
     background-color: transparent;
     border: 2px solid $gray;
 }
 
-.card-btn:nth-child(2){
+.card-btn__decrement{
     border: none;
-    padding: 0 .5em;
+    width: 25px;
     cursor: pointer;
     background-color: $gray;
     color: black;
@@ -40,7 +53,7 @@
     text-align: center;
 }
 
-.card-btn:nth-child(2):hover{
+.card-btn__decrement:hover{
     background-color: gray;
     color: black;
     font-weight: bold;
