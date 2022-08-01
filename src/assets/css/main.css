@@ -655,8 +655,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   .swiper-slide {
     display: flex;
     flex-direction: column;
-    gap: 0rem;
-    width: 100%;
+    width: 50%;
   }
 }
 footer {
