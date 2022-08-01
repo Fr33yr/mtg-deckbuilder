@@ -3,7 +3,6 @@ import { createSlice } from '@reduxjs/toolkit'
 import {
     hasItem, removeItem,
     addAmount,
-    decreaseAmount
 } from '../utils/reducerFunctions'
 
 export const deckSlice = createSlice({
@@ -12,21 +11,19 @@ export const deckSlice = createSlice({
         value: [],
         deckName: '',
         deckId: '',
-        amount: 0
+        deckSize: 0
     },
     reducers: {
         addCards: (state, action) => {
-            if (hasItem(state.value, action.payload.id) !== undefined) {
-                addAmount(state.value, action.payload.id)
-            } else if (hasItem(state.value, action.payload.id) === undefined) {
+            let {id} = action.payload
+            if (hasItem(state.value, id) !== undefined) {
+                addAmount(state.value, id)
+            } else if (hasItem(state.value, id) === undefined) {
                 state.value.push(action.payload)
             }
         },
         rermoveCards: (state, action) => {
-            if (action.payload.amount < 2) {
-                removeItem(state.value, action.payload.id)
-            }
-            decreaseAmount(state.value, action.payload.id)
+            removeItem(state.value, action.payload)
         },
         reset: (state, action) => {
             state.value = []
@@ -40,7 +37,7 @@ export const deckSlice = createSlice({
             state.deckId = id
         },
         getAmount: (state, action) => {
-            state.amount = action.payload
+            state.deckSize = action.payload
         }
     }
 })

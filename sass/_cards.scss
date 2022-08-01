@@ -1,0 +1,48 @@
+@import './_config.scss';
+
+//===Card===
+.card {
+    width: 8rem;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+}
+
+.card-img {
+    width: 9rem;
+    height: 13rem;
+}
+
+.card-btn:nth-child(1){
+    padding: 0 .5em;
+    font-weight: bold;
+    background-color: rgba(255, 68, 0, 0.771);
+    cursor: pointer;
+    border: none;
+}
+
+.card-btn:nth-child(1):hover{
+    background-color: orangered;
+}
+
+.card-btn:nth-child(1):disabled{
+    cursor: auto;
+    background-color: transparent;
+    border: 2px solid $gray;
+}
+
+.card-btn:nth-child(2){
+    border: none;
+    padding: 0 .5em;
+    cursor: pointer;
+    background-color: $gray;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-btn:nth-child(2):hover{
+    background-color: gray;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}

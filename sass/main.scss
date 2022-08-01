@@ -3,6 +3,7 @@
 @import './_loginforms.scss';
 @import './_search.scss';
 @import './_deck.scss';
+@import './_cards.scss';
 @import './toast.scss';
 
 body {
@@ -139,36 +140,6 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
         gap: 0rem;
         width: 100%;
     }
-}
-
-//===Card===
-.card {
-    width: 8rem;
-    margin: 0 auto;
-    padding-bottom: 1rem;
-}
-
-.card-img {
-    width: 9rem;
-    height: 13rem;
-}
-
-.card-btn{
-    padding: 0 .5em;
-    font-weight: bold;
-    background-color: rgba(255, 68, 0, 0.771);
-    cursor: pointer;
-    border: none;
-}
-
-.card-btn:hover{
-    background-color: orangered;
-}
-
-.card-btn:disabled{
-    cursor: auto;
-    background-color: transparent;
-    border: 2px solid $gray;
 }
 
 //===Footer===

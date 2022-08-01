@@ -14,9 +14,13 @@ export function DeckView() {
     deckList.length && dispatch(getAmount(deckList.flat().map((i) => (i.amount)).reduce(add)))
   }, [deckList])
 
+  const handleDelete = (id) =>{
+    dispatch(rermoveCards(id))
+  }
+
   return (
     <Fragment>
-      <div className="deckview">
+      <div className="deckview" >
         <div className="deckstats">
           {deckList.length > 0 &&
             <h3 className="cardsamount">
@@ -24,7 +28,7 @@ export function DeckView() {
             </h3>
           }
         </div>
-        
+         
           {
             deckList && deckList.map((item, index) =>
             (
@@ -35,7 +39,7 @@ export function DeckView() {
                     src={item.imageUrl} alt={item.name} />
                 </div>
                 <button className='remove-btn'
-                  onClick={() => dispatch(rermoveCards(item))}>
+                  onClick={()=>handleDelete(item.id)}>
                   -
                 </button>
               </div>
