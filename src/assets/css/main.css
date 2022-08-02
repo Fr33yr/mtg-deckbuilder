@@ -731,6 +731,7 @@ body {
   width: 60px;
   padding: 0.5rem 0;
   border-radius: 2px;
+  margin-left: 0.5rem;
   border: transparent;
   background-color: rgba(255, 68, 0, 0.792);
 }
