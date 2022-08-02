@@ -32,6 +32,15 @@ html {
   overflow-y: scroll;
 }
 
+.login-warn {
+  text-align: left;
+  position: absolute;
+  left: 0;
+  padding-top: 0.34em;
+  margin-left: 4rem;
+  color: rgb(233, 233, 246);
+}
+
 @media only screen and (max-width: 480px) {
   .home {
     display: grid;
@@ -352,7 +361,7 @@ html {
 
 .deckview {
   z-index: 100;
-  margin-top: 6vh;
+  margin-top: 3rem;
   max-height: 77vh;
   min-width: 100%;
   padding-left: 0.5rem;
@@ -449,6 +458,7 @@ html {
   flex-direction: row;
   margin: 0 auto;
   margin-bottom: 2vh;
+  margin-top: 2vh;
 }
 
 .save-btn {
@@ -584,21 +594,17 @@ html {
   background-color: red;
 }
 
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
-  font-size: 1rem;
-  font-family: "Ibarra Real Nova", serif;
+  list-style: none;
+  text-decoration: none;
+  letter-spacing: 1px;
 }
 
-.main {
-  display: flex;
-  flex-direction: row;
-  height: 90vh;
-  width: 100%;
-  background-color: #101319;
+html {
+  scroll-behavior: smooth;
 }
 
 header {
@@ -628,15 +634,6 @@ header {
   color: black;
 }
 
-.login-warn {
-  text-align: left;
-  position: absolute;
-  left: 0;
-  padding-top: 0.34em;
-  margin-left: 4rem;
-  color: rgb(233, 233, 246);
-}
-
 .login-btn {
   position: absolute;
   right: 0;
@@ -655,6 +652,43 @@ header {
 
 .login-btn:hover {
   background-color: orangered;
+}
+
+.home-link {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  height: 30px;
+  margin: 0.9rem 0;
+  margin-left: 1rem;
+  padding: 0.35em 1em;
+  text-align: center;
+  background-color: rgba(255, 68, 0, 0.792);
+}
+
+.home-link:hover {
+  background-color: orangered;
+}
+
+.home-link:visited {
+  color: black;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-size: 1rem;
+  font-family: "Ibarra Real Nova", serif;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  height: 90vh;
+  width: 100%;
+  background-color: #101319;
 }
 
 .toggle-btn__cardsview {

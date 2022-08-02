@@ -1,0 +1,68 @@
+@import './config.scss';
+
+header {
+    width: 100%;
+    min-height: 8.5vh;
+    background-color: $layout-black;
+    display: flex;
+    justify-content: space-around;
+}
+
+.newdeck{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: .9rem 0;
+    margin-left: 1rem;
+    text-align: center;
+    background-color: $btn-bg-color;
+    padding: 5px;
+}
+
+.newdeck:hover{
+    background-color: $btn-hover-bg-color;
+}
+
+.newdeck:visited{
+    color: black;
+}
+
+.login-btn {
+    position: absolute;
+    right: 0;
+    margin: .9rem 0;
+    margin-right: 1rem;
+    padding: .5em 1em;
+    background-color: $btn-bg-color;
+    cursor: pointer;
+    font-weight: $fw-medium;
+    border: none;
+}
+
+.login-btn:visited{
+    color: black;
+}
+
+.login-btn:hover{
+    background-color: $btn-hover-bg-color;
+}
+
+.home-link{
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    height: 30px;
+    margin: .9rem 0;
+    margin-left: 1rem;
+    padding: .35em 1em;
+    text-align: center;
+    background-color: $btn-bg-color;
+}
+
+.home-link:hover{
+    background-color: $btn-hover-bg-color;
+}
+
+.home-link:visited{
+    color: black;
+}

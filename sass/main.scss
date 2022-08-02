@@ -5,6 +5,7 @@
 @import './_deck.scss';
 @import './_cards.scss';
 @import './toast.scss';
+@import './header.scss';
 
 body {
     margin: 0;
@@ -21,62 +22,6 @@ body {
     height: 90vh;
     width: 100%;
     background-color: $pich-black;
-}
-
-header {
-    width: 100%;
-    min-height: 8.5vh;
-    background-color: $layout-black;
-    display: flex;
-    justify-content: space-around;
-}
-
-.newdeck{
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: .9rem 0;
-    margin-left: 1rem;
-    text-align: center;
-    background-color: $btn-bg-color;
-    padding: 5px;
-}
-
-.newdeck:hover{
-    background-color: $btn-hover-bg-color;
-}
-
-.newdeck:visited{
-    color: black;
-}
-
-.login-warn{
-    text-align: left;
-    position: absolute;
-    left: 0;
-    padding-top: .34em;
-    margin-left: 4rem;
-    color: $fc-primary;
-}
-
-.login-btn {
-    position: absolute;
-    right: 0;
-    margin: .9rem 0;
-    margin-right: 1rem;
-    padding: .5em 1em;
-    background-color: $btn-bg-color;
-    cursor: pointer;
-    font-weight: $fw-medium;
-    border: none;
-}
-
-.login-btn:visited{
-    color: black;
-}
-
-.login-btn:hover{
-    background-color: $btn-hover-bg-color;
 }
 
 .toggle-btn__cardsview{

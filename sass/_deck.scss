@@ -3,7 +3,7 @@
 //===Deck===
 .deckview {
     z-index: 100;
-    margin-top: 6vh;
+    margin-top: 3rem;
     max-height: 77vh;
     min-width: 100%;
     padding-left: .5rem;
@@ -103,6 +103,7 @@
     flex-direction: row;
     margin: 0 auto;
     margin-bottom: 2vh;
+    margin-top: 2vh;
 }
 
 .save-btn {

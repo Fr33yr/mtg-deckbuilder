@@ -44,6 +44,10 @@ export default function Header(props) {
           </Link> : ''
           }
 
+          {
+            location.pathname === '/deckbuilder' ? <Link className='home-link' to='/'>Home</Link> : ""
+          }
+
           {user ? <button className='login-btn'
             onClick={handleLogout}>Logout</button> :
             <Link to={"/login"} target="_blank" className='login-btn'
