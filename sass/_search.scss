@@ -22,6 +22,10 @@
     justify-content: space-between;
 }
 
+@media only screen and (max-width: 480px) {
+    //
+}
+
 .find-btn {
     height: 25px;
     background-color: $btn-bg-color;

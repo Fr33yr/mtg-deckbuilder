@@ -4,6 +4,7 @@ import { Formik, Form, Field } from 'formik'
 
 import '../assets/css/main.css'
 import { types } from '../utils/types'
+import {colors} from '../utils/colors'
 import { getCards } from '../api/api'
 import CardsContext from '../context/CardsContext'
 import {useAuth} from '../context/AuthContext'
@@ -24,30 +25,20 @@ export default function Search() {
                         name: ''
                     }}
                     onSubmit={async (values)=> {
-                        const res = await getCards(values.name, values.type, values.colors.join())
+                        let {name, type, colors} = values
+                        colors = colors.join()
+                        const res = await getCards(name, type, colors)
                         setSearchResults(res)
                     }}>
                     <Form className='searchform' style={user? {} : {margin: "0 auto"}}>
-                        <label className='container-checkbox'>
-                            <Field type="checkbox" name="colors" value="R" className='color-checkbox'/>
-                            <span className="checkmark" style={{border: "4px solid red"}}></span>
-                        </label>
-                        <label className='container-checkbox'>
-                            <Field type="checkbox" name="colors" value="G" className='color-checkbox'/>
-                            <span className="checkmark" style={{border: "4px solid green" }}></span>
-                        </label>
-                        <label className='container-checkbox'>
-                            <Field type="checkbox" name="colors" value="U" className='color-checkbox'/>
-                            <span className="checkmark" style={{border: "4px solid blue"}}></span>
-                        </label>
-                        <label className='container-checkbox'>
-                            <Field type="checkbox" name="colors" value="B" className='color-checkbox'/>
-                            <span className="checkmark" style={{border: "4px solid black"}}></span>
-                        </label>
-                        <label className='container-checkbox'>
-                            <Field type="checkbox" name="colors" value="W" className='color-checkbox'/>
-                            <span className="checkmark" style={{border: "4px solid wheat"}}></span>
-                        </label>
+
+                        {colors.map((item, index)=>(
+                                <label className="container-checkbox" key={index}>
+                                    <Field type="checkbox" name="colors" value={item.val} className='color-checkbox'/>
+                                    <span className="checkmark" style={{border: `4px solid ${item.color}`}}></span>
+                                </label>
+                            ))
+                        }
 
                         <label>
                             <Field name="type" as="select" className="select">
@@ -56,7 +47,7 @@ export default function Search() {
                             </Field>
                         </label>
 
-                        <Field type="text" name='name' />
+                        <Field type="text" name='name'/>
 
                         <button type="submit"
                         className='find-btn'>Find</button>
