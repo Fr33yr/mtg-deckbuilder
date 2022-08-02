@@ -14,6 +14,9 @@ body {
     overflow: hidden;
     font-size: $fs-body;
     font-family: $ff-primary;
+    a:visited{
+        color: black;
+    }
 }
 
 .main {
