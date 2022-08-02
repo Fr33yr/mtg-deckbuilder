@@ -23,7 +23,24 @@
 }
 
 @media only screen and (max-width: 480px) {
-    //
+    .searchform{
+        padding-top: 1rem;
+        height: 135px;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .search{
+        height: 200px;
+    }
+}
+
+.name-input{
+    display: flex;
+    flex-direction: row;
+    input{
+        margin: 0;
+    }
 }
 
 .find-btn {
@@ -49,6 +66,11 @@ form input {
 }
 
 //===Colors===
+.colors-container{
+    display: flex;
+    flex-direction: row;
+}
+
 .container-checkbox {
     display: block;
     position: relative;

@@ -26,7 +26,7 @@ export function CardsView(props) {
 
   useEffect(() => {
     if (width <= 480) {
-      setChunkSize(2)
+      setChunkSize(1)
     }
     else if (width <= 580) {
       setChunkSize(4)
@@ -56,6 +56,7 @@ export function CardsView(props) {
             slidesPerView={1}
             modules={[Pagination]}
             pagination={{ clickable: true }}
+            
           >
             <div className="cards-slide">
               {

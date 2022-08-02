@@ -34,7 +34,7 @@ export function DeckView(props) {
     <Fragment>
       <div className="deckview" style={toggle ? { transform: "translate(-100%, 0)" } : { transform: "translate(0, 0)" }}>
         <button className='toggle-btn__deck' onClick={handleToggle}>
-          Cards
+          Search
         </button>
         {user ? <Save /> : ""}
         <div className="deckstats">

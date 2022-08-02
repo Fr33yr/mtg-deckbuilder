@@ -24,17 +24,16 @@ body {
     background-color: $pich-black;
 }
 
-.toggle-btn__cardsview{
+.toggle-btn__cardsview {
     cursor: pointer;
-    width: 40px;
-    margin-left: 10px;
-    margin-bottom: 10px;
+    width: 60px;
+    padding: .5rem 0;
     border-radius: 2px;
     border: transparent;
     background-color: $btn-bg-color;
 }
 
-.toggle-btn__cardsview:hover{
+.toggle-btn__cardsview:hover {
     background-color: $btn-hover-bg-color;
 }
 
@@ -44,6 +43,10 @@ body {
     padding-top: 3.5rem;
     height: 90vh;
     min-width: 100%;
+}
+
+.swiper-container{
+    margin-top: 1rem;
 }
 
 .swiper-wrapper {
@@ -64,13 +67,15 @@ body {
 span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     background-color: orangered;
     opacity: 1;
-  }
-  
-  /* target all bullets */
-  .swiper-pagination-bullet {
+}
+
+
+
+/* target all bullets */
+.swiper-pagination-bullet {
     border: 1px solid orange;
     opacity: 1;
-  }
+}
 
 @media only screen and (max-width: 800px) {
     .swiper-slide {
@@ -93,10 +98,23 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 }
 
 @media only screen and (max-width: 480px) {
+
+    .cardsviewer{
+        margin-top: 24vh;
+        height: 60vh;
+    }
+
     .swiper-slide {
         display: flex;
         flex-direction: column;
         width: 50%;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        display: none;
     }
 }
 
@@ -108,20 +126,23 @@ footer {
     background-color: $layout-black;
     position: absolute;
     bottom: 0;
-    div{
+    padding-bottom: .5rem;
+
+    div {
         padding-top: .9rem;
         text-align: center;
     }
-    p{
+
+    p {
         color: $fc-primary;
     }
 }
 
-footer a:visited{
+footer a:visited {
     color: $fc-primary;
 }
 
-footer a:hover{
+footer a:hover {
     color: white;
     transition: linear;
 }

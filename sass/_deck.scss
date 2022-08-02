@@ -26,6 +26,14 @@
     }
 }
 
+@media only screen and (max-width: 480px) {
+    .deckview {
+        margin: 0;
+        margin-top: 1.5rem;
+        max-height: 80vh;
+    }
+}
+
 .decklist-item {
     display: flex;
     flex-direction: row;
@@ -85,7 +93,9 @@
 
 .toggle-btn__deck{
     cursor: pointer;
-    width: 40px;
+    width: 60px;
+    padding: .5rem;
+    margin-bottom: 20px;
     border-radius: 2px;
     border: transparent;
     background-color: $btn-bg-color;
