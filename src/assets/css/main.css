@@ -273,10 +273,17 @@ html {
   .search {
     height: 200px;
   }
+  .name-input {
+    margin: 0;
+  }
+  .select {
+    margin-right: 1rem;
+  }
 }
 .name-input {
   display: flex;
   flex-direction: row;
+  margin-right: 2rem;
 }
 .name-input input {
   margin: 0;
@@ -301,7 +308,7 @@ form input {
 }
 
 .select {
-  margin-right: 1rem;
+  margin-right: 2rem;
 }
 
 .colors-container {
@@ -717,6 +724,9 @@ body {
   font-size: 1rem;
   font-family: "Ibarra Real Nova", serif;
 }
+body a:visited {
+  color: black;
+}
 
 .main {
   display: flex;
@@ -747,7 +757,7 @@ body {
 }
 
 .swiper-container {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .swiper-wrapper {
@@ -813,14 +823,13 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 }
 footer {
   width: 100%;
-  min-height: 8.5vh;
+  height: 8vh;
   background-color: #202632;
   position: absolute;
   bottom: 0;
-  padding-bottom: 0.5rem;
+  padding-top: 0.4rem;
 }
 footer div {
-  padding-top: 0.9rem;
   text-align: center;
 }
 footer p {

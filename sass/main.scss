@@ -50,7 +50,7 @@ body {
 }
 
 .swiper-container{
-    margin-top: 1rem;
+    margin-top: .5rem;
 }
 
 .swiper-wrapper {
@@ -126,14 +126,12 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 
 footer {
     width: 100%;
-    min-height: 8.5vh;
+    height: 8vh;
     background-color: $layout-black;
     position: absolute;
     bottom: 0;
-    padding-bottom: .5rem;
-
+    padding-top: .4rem;
     div {
-        padding-top: .9rem;
         text-align: center;
     }
 
