@@ -402,9 +402,23 @@ html {
   border-right: 2px solid #8D8AA8;
 }
 
+.add-btn {
+  height: 21px;
+  min-width: 24px;
+  color: black;
+  background-color: rgba(255, 68, 0, 0.792);
+  font-weight: bold;
+  text-align: center;
+  border: none;
+}
+
+.add-btn:hover {
+  background-color: orangered;
+}
+
 .remove-btn {
-  height: 40px;
-  min-width: 28px;
+  height: 21px;
+  min-width: 24px;
   background-color: transparent;
   color: #8D8AA8;
   font-weight: bold;

@@ -4,7 +4,7 @@ import {
     hasItem, removeItem,
     addAmount,
 } from '../utils/reducerFunctions'
-
+ 
 export const deckSlice = createSlice({
     name: 'deck',
     initialState: {
@@ -16,6 +16,7 @@ export const deckSlice = createSlice({
     reducers: {
         addCards: (state, action) => {
             let {id} = action.payload
+            console.log(id);
             if (hasItem(state.value, id) !== undefined) {
                 addAmount(state.value, id)
             } else if (hasItem(state.value, id) === undefined) {

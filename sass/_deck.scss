@@ -54,9 +54,23 @@
     border-right: 2px solid $gray;
 }
 
+.add-btn{
+    height: 21px;
+    min-width: 24px;
+    color: black;
+    background-color: $btn-bg-color;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+}
+
+.add-btn:hover{
+    background-color: $btn-hover-bg-color;
+}
+
 .remove-btn {
-    height: 40px;
-    min-width: 28px;
+    height: 21px;
+    min-width: 24px;
     background-color: transparent;
     color: $gray;
     font-weight: bold;
