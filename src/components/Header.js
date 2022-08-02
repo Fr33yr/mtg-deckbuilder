@@ -39,18 +39,19 @@ export default function Header(props) {
     <Fragment>
       {hide ? <header></header> :
         <header>
-          {location.pathname === '/' ? <Link to="/deckbuilder" onClick={handleOnClick} className='newdeck'>
+          {location.pathname === '/' ? <Link to="/deckbuilder" onClick={handleOnClick} className='newdeck'
+          style={{color: "black"}}>
            <b>+</b> New deck
           </Link> : ''
           }
 
           {
-            location.pathname === '/deckbuilder' ? <Link className='home-link' to='/'>Home</Link> : ""
+            location.pathname === '/deckbuilder' ? <Link style={{color: "black"}} className='home-link' to='/'>Home</Link> : ""
           }
 
           {user ? <button className='login-btn'
-            onClick={handleLogout}>Logout</button> :
-            <Link to={"/login"} target="_blank" className='login-btn'
+            onClick={handleLogout} style={{color: "black"}}>Logout</button> :
+            <Link to={"/login"} target="_blank" className='login-btn' style={{color: "black"}}
             >Login</Link>}
         </header>}
     </Fragment>
