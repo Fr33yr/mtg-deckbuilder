@@ -1,14 +1,17 @@
 import React, { Fragment, useEffect } from 'react'
 import { Toaster, toast } from 'react-hot-toast'
+import {useDispatch} from 'react-redux'
 
 import { useAuth } from '../context/AuthContext'
 import { useFetch } from '../hooks/useFetch'
 import { DeckItem } from '../components/DeckItem'
+import {reset} from '../store/deckSlice'
 
 
 export function Home() {
   const { user } = useAuth()
   const [data, setData] = useFetch(user)
+
 
   return (
     <Fragment>

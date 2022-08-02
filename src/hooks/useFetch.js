@@ -19,6 +19,8 @@ export function useFetch(user){
             })
             setData(arr)
           }).catch(err => console.log(err))
+        }else if (!user){
+          setData([])
         }
       }, [user, location])
 
