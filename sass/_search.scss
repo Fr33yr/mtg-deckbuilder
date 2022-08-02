@@ -1,41 +1,17 @@
 @import './_config.scss';
 
 //===Search===
-.save {
-    width: 233px;
-    display: flex;
-    flex-direction: row;
-    margin-right: 6vw;
-}
 
-.save-btn {
-    height: 25px;
-    border-radius: 2px;
-    background-color: $btn-bg-color;
-    padding: 0 1.3em;
-    cursor: pointer;
-    border: none;
-}
-
-.save-btn:hover {
-    background-color: $btn-hover-bg-color;
-}
-
-.save-deckname {
-    max-height: 25px;
-    padding-left: .4em;
-    margin: 0;
-}
 
 .search {
     position: absolute;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
     height: 50px;
+    padding-bottom: 3vh;
+    width: 100%;
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     background-color: $layout-black;
 }
 
@@ -44,7 +20,6 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    margin-left: 22vw;
 }
 
 .find-btn {

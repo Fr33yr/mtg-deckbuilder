@@ -80,3 +80,32 @@
 .toggle-btn__deck:hover{
     background-color: $btn-hover-bg-color;
 }
+
+//===Save===
+
+.save {
+    width: 233px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-bottom: 2vh;
+}
+
+.save-btn {
+    height: 25px;
+    border-radius: 2px;
+    background-color: $btn-bg-color;
+    padding: 0 1.3em;
+    cursor: pointer;
+    border: none;
+}
+
+.save-btn:hover {
+    background-color: $btn-hover-bg-color;
+}
+
+.save-deckname {
+    max-height: 25px;
+    padding-left: .4em;
+    margin: 0;
+}

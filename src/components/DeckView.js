@@ -3,12 +3,14 @@ import { useSelector, useDispatch } from 'react-redux'
 
 import '../assets/css/main.css'
 import { rermoveCards, getAmount } from '../store/deckSlice'
-
+import {Save} from '../components/Save'
+import {useAuth} from '../context/AuthContext'
 
 export function DeckView(props) {
   let { toggle, setToggle } = props
   const deckList = useSelector((state) => state.deck.value)
   const dispatch = useDispatch()
+  const {user} = useAuth()
   const add = (acc, curr) => acc + curr
 
   useEffect(() => {
@@ -29,6 +31,7 @@ export function DeckView(props) {
         <button className='toggle-btn__deck' onClick={handleToggle}>
           Cards
         </button>
+        {user ? <Save/> : ""}
         <div className="deckstats">
           {deckList.length > 0 &&
             <h3 className="cardsamount">
