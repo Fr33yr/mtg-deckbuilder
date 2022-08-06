@@ -49,7 +49,7 @@ export default function Search() {
                         </label>
 
                         <div className="name-input">
-                            <Field type="text" name='name' />
+                            <Field type="text" name='name' autocomplete="off"/>
                             <button type="submit"
                                 className='find-btn'>Find</button>
                         </div>
