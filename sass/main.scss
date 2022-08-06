@@ -50,6 +50,8 @@ body {
     padding-top: 3.5rem;
     height: 90vh;
     min-width: 100%;
+    
+    overflow-y: scroll;
 }
 
 .swiper-container{
@@ -134,6 +136,7 @@ footer {
     position: absolute;
     bottom: 0;
     padding-top: .4rem;
+    z-index: 100;
     div {
         text-align: center;
     }

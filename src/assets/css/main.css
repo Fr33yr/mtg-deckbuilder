@@ -274,7 +274,7 @@ html {
     height: 200px;
   }
   .name-input {
-    margin: 0;
+    margin-left: 1.8rem;
   }
   .select {
     margin-right: 1rem;
@@ -724,6 +724,9 @@ body {
   font-size: 1rem;
   font-family: "Ibarra Real Nova", serif;
 }
+body a {
+  color: black;
+}
 body a:visited {
   color: black;
 }
@@ -754,6 +757,7 @@ body a:visited {
   padding-top: 3.5rem;
   height: 90vh;
   min-width: 100%;
+  overflow-y: scroll;
 }
 
 .swiper-container {
@@ -828,6 +832,7 @@ footer {
   position: absolute;
   bottom: 0;
   padding-top: 0.4rem;
+  z-index: 100;
 }
 footer div {
   text-align: center;
