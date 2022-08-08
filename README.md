@@ -6,8 +6,8 @@ React Redux Sass firebase React-router Formik
 
 =======================================================================================
 
-![github-small](app-screenshot2.bmp)
+![github-small](app-screenshot2.jpg)
 
 =======================================================================================
 
-![github-small](app-screenshot3.bmp)
+![github-small](app-screenshot3.jpg)
