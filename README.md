@@ -1,6 +1,6 @@
 Used dependencies
 
-React Redux Sass firebase React-router Formik
+React Redux firebase React-router Formik
 
 ![github-small](app-screenshot1.jpg)
 
