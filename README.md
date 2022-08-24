@@ -1,6 +1,6 @@
 # Mtg-deckbuilder
 
-Required dependencies
+Required dependencies:
 -React 
 -Redux 
 -firebase 
