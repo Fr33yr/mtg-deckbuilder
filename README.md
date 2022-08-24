@@ -1,11 +1,11 @@
 # Mtg-deckbuilder
 
 Required dependencies:
--React 
--Redux 
--firebase 
--React-router 
--Formik
+-React </br>
+-Redux </br>
+-firebase </br>
+-React-router </br>
+-Formik </br>
 
 ![github-small](app-screenshot1.jpg)
 
