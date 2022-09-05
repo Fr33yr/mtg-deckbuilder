@@ -11,7 +11,7 @@ npm install
 ```
   Then initialize local development server
 ```bash
-npm run dev
+npm start
 ```
 
 ### required dependencies
