@@ -4,6 +4,11 @@
 It comsumes the Mtg api and uses firebase firestore for login and sotrage
 to save your decks.
 
+## How to run it in the local server
+```bash
+npm run dev
+```
+
 ### required dependencies
 - react
 - redux
@@ -12,3 +17,4 @@ to save your decks.
 - formik
 - react-hot-toast
 - firestore
+
